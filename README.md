@@ -129,10 +129,10 @@ and in the html
     </style>
 <![endif]-->
 ```
-  ##buttons
+  ## Buttons
   ### Fix Buttons With a Different Colour Behind the Text in Dark Mode in Outlook.com Webmail, Outlook for iOS, or Outlook for Android
   Make the border transparent, e.g. border: 8px solid transparent so that only the background colour of the link element shows through
-  ## in Outlook for Windows in Dark Mode
+  ## In Outlook for Windows in Dark Mode
   Make the <a> tag’s background transparent for Outlook only. You can do this by adding conditional CSS to the head of your email.
 
 For example, if you have a link like this with a class of buttonlink: <a class="buttonlink"> you would include the following in the head of your email:
@@ -144,16 +144,16 @@ For example, if you have a link like this with a class of buttonlink: <a class="
     </style>
 <![endif]-->
 ```
-  ###Fix Buttons Disappearing Into the Background in Dark Mode in the Gmail App for iOS/Android, the Outlook App for iOS/Android, in Outlook for Mac and at Outlook.com
+  ### Fix Buttons Disappearing Into the Background in Dark Mode in the Gmail App for iOS/Android, the Outlook App for iOS/Android, in Outlook for Mac and at Outlook.com
   These email clients will keep your button dark but flip the body background to be dark as well. Suddenly, your dark button’s edges are invisible.
   
-  Try adding a border to the outside of your button in the same colour as the background in light mode. Many email clients don’t alter CSS border colours when they process colours for Dark Mo
-  Try using the CSS outline property instead of the border property if you have a square button, and you can also fake a border by nesting a button inside a slightly padded element and applying a background to that. 
-  By using a background image or a linear-gradient, you can actually ensure that the colour of the fake border doesn’t change.
+  - Try adding a border to the outside of your button in the same colour as the background in light mode. Many email clients don’t alter CSS border colours when they process colours for Dark Mo
+  - Try using the CSS outline property instead of the border property if you have a square button, and you can also fake a border by nesting a button inside a slightly padded element and applying a background to that. 
+  - By using a background image or a linear-gradient, you can actually ensure that the colour of the fake border doesn’t change.
   
   
-  ##Borders
-  ###Using Media Queries to Control Borders in Dark Mode in Apple Mail (iOS and macOS)
+  ## Borders
+  ### Using Media Queries to Control Borders in Dark Mode in Apple Mail (iOS and macOS)
   
   Example in the style block 
   ```
@@ -164,7 +164,7 @@ For example, if you have a link like this with a class of buttonlink: <a class="
 </style>
 ```
 
-###Using Data Attributes to Fix Borders in Dark Mode in outlook.com and the Outlook Apps for iOS/Android
+### Using Data Attributes to Fix Borders in Dark Mode in outlook.com and the Outlook Apps for iOS/Android
 
 	In the code
   ```
@@ -179,7 +179,7 @@ For example, if you have a link like this with a class of buttonlink: <a class="
     }
 </style>
 ```
-  ###Using Different Elements to Fix Border Problems in Outlook for Mac
+  ### Using Different Elements to Fix Border Problems in Outlook for Mac
   Outlook for Mac does tend to invert border colors but it keeps dark backgrounds dark
   
   **Try Outline if You Are Working With Square Edges**
