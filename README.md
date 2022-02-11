@@ -34,7 +34,7 @@ solution 2
  solution 3
  **If You Need White Text**
 Body background must be #555555 or lighter
-VML fill must be #333333 or darker
+VML fill must be `#333333` or darker
 example : 
 `<body style="background-color:#555555;">`
   or in the style block
@@ -45,24 +45,27 @@ example :
             background-color:#555555 !important;
         }
     </style>
-<![endif]-->```
+<![endif]-->
+```
   
   Then ensure your vml element is dark
   
 `<v:rect fillcolor="#333333">` or `<v:fill type="frame" src="image.jpg" color="#333333" />`
   then in the code
- ```<p style="margin:0;color:#ffffff;mso-color-alt:auto;">White text</p>```
+ `<p style="margin:0;color:#ffffff;mso-color-alt:auto;">White text</p>`
   
   or with a class
 `<p class="vml-white" style="margin:0;color:#ffffff;">White text</p>`
   and in the style block
-  ```<!--[if gte mso 16]>
+  ```
+  <!--[if gte mso 16]>
     <style>
         .vml-white {
             mso-color-alt: auto;
         }
     </style>
-<![endif]-->```
+<![endif]-->
+```
   
 **If You Need Black Text**
 Body background must be #444444 or darker
