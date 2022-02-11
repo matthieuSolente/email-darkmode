@@ -154,27 +154,26 @@ For example, if you have a link like this with a class of buttonlink: <a class="
   
   ## Borders
   ### Using Media Queries to Control Borders in Dark Mode in Apple Mail (iOS and macOS)
-  
-  Example in the style block 
 	
-  ```
+	Example in the style block 
+```
   <style>
     @media (prefers-color-scheme: dark) {
         .borders {border-color: #fafafa !important;}
     }
 </style>
-	```
+```
 
 ### Using Data Attributes to Fix Borders in Dark Mode in outlook.com and the Outlook Apps for iOS/Android
 
 	In the code
 	
-  ```
-	<td class="oldotcom-border" style="border:2px solid #000000;padding:30px 40px;">
-		```
+```
+<td class="oldotcom-border" style="border:2px solid #000000;padding:30px 40px;">
+```
   In the style block :
 		
-  ```
+ ```
   <style>
     [data-ogsc] .oldotcom-border, 
     [data-ogsc] .oldotcom-border .btnlink {
@@ -187,13 +186,13 @@ For example, if you have a link like this with a class of buttonlink: <a class="
   
 - Try Outline if You Are Working With Square Edges
 		
-  ```
-	<td style="outline:2px solid #ffffff;border:2px solid #000000;">
-		```
+```
+<td style="outline:2px solid #ffffff;border:2px solid #000000;">
+```
 - Try a Box-Shadow
 		
-  ```
-		box-shadow: 0px 0px 0px 2px #ffffff;` or `box-shadow: inset 0px 0px 0px 2px #ffffff;
-		```
+ ```
+box-shadow: 0px 0px 0px 2px #ffffff;` or `box-shadow: inset 0px 0px 0px 2px #ffffff;
+```
 - Try Using CSS Blend Modes
   
