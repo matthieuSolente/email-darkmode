@@ -23,18 +23,18 @@ In the style :
 ## Darkmode : VML
 
 solution 1 
-```mso-style-textfill-fill-color:#ffffff;```
+`mso-style-textfill-fill-color:#ffffff;`
 
 solution 2
  use CSS positioning and z-index to layer your email content over the top of your VML content, keeping your text content separate from your VML. 
- use the ```mso-style-textfill-type:gradient``` trick
+ use the `mso-style-textfill-type:gradient` trick
  
  solution 3
  **If You Need White Text**
 Body background must be #555555 or lighter
 VML fill must be #333333 or darker
 example : 
-```<body style="background-color:#555555;">```
+`<body style="background-color:#555555;">`
   or in the style block
   '<!--[if gte mso 16]>
     <style>
@@ -42,11 +42,11 @@ example :
             background-color:#555555 !important;
         }
     </style>
-<![endif]-->```
+<![endif]-->`
   
   Then ensure your vml element is dark
   
-```<v:rect fillcolor="#333333">``` or ```<v:fill type="frame" src="image.jpg" color="#333333" />```
+`<v:rect fillcolor="#333333">` or `<v:fill type="frame" src="image.jpg" color="#333333" />`
   then in the code
  ```<p style="margin:0;color:#ffffff;mso-color-alt:auto;">White text</p>```
   
