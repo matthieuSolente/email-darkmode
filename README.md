@@ -7,31 +7,36 @@ for other darkmode clients, here are some hacks
 
 
 ## Image Swap (Code from Litmus team)
-This works on andoird 10 gmail dark YES
-iphone se dark Outlook YES
-office 365 dark mac OS) YES
+This works on 
+- Andoird 10 Gmail Dark 
+- Iphone SE Dark Outlook 
+- Office 365 Dark Mac OS
 
-android 12 gmail dark NO
-outlook chrome dark webmail NO
-iphone 12 ios 14 force darkmode NO
-office 365 dark windows NO
-Mac OS Monterrey, Big Sur, Mojave no changes.
+Don't work on
+- Android 12 gmail dark
+- Outlook chrome dark webmail
+- Iphone 12 ios 14 force Darkmode
+- Office 365 Dark Windows
+- Mac OS Monterrey, Big Sur, Mojave no changes.
 
+In the head
 ```
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
 ```
+In the style block
+
 ```
 @media (prefers-color-scheme: dark ) {
-  /* Shows Dark Mode-Only Content, Like Images */
-  .dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
+/* Shows Dark Mode-Only Content, Like Images */
+.dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
    
-  /* Hides Light Mode-Only Content, Like Images */
-  .light-img { display:none; display:none !important; }
-  }
+/* Hides Light Mode-Only Content, Like Images */
+.light-img { display:none; display:none !important; }
+}
 ```
 
-For Outlook APp
+For Outlook App
 ```
 /* Shows Dark Mode-Only Content, Like Images */
 [data-ogsc] .dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
@@ -41,27 +46,27 @@ For Outlook APp
 ```
 
 Then in the html :
+
 ```
 <img class="light-img" src="https://campaigns.litmus.com/_email/_global/images/logo_icon-name-black.png" width="163" height="60" alt="Litmus" style="color: #33373E; font-family:'proxima_nova', Helvetica, Arial, sans-serif; text-align:center; font-weight:bold; font-size:36px; line-height:40px; text-decoration: none; margin: 0 auto; padding: 0;" border="0" />
- <!-- The following Dark Mode logo image is hidden 
- with MSO conditional code and inline CSS, but will be         
- revealed once Dark Mode is triggered -->
+ <!-- The following Dark Mode logo image is hidden with MSO conditional code and inline CSS, but will be revealed once Dark Mode is triggered -->
  
-<!--[if !mso]><! --><div class="dark-img" style="display:none; overflow:hidden; float:left; width:0px; max-height:0px; max-width:0px; line-height:0px; visibility:hidden;" align="center">
+<!--[if !mso]><!----><div class="dark-img" style="display:none; overflow:hidden; float:left; width:0px; max-height:0px; max-width:0px; line-height:0px; visibility:hidden;" align="center">
 <img src="https://campaigns.litmus.com/_email/_global/images/logo_icon-name-white.png" width="163" height="60" alt="Litmus" style="color: #ffffff; font-family:'proxima_nova', Helvetica, Arial, sans-serif; text-align:center; font-weight:bold; font-size:36px; line-height:40px; text-decoration: none; margin: 0 auto; padding: 0;" border="0" />
 </div><!--<![endif]-->
 ```
 
-For more informations, please check [Litmus](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
+For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
 
-## Darkmode : Outlook 365 dark mode (code from Nicole Merlin)
+## Darkmode : Outlook 365 dark mode (All code from Nicole Merlin)
 
 ### MSO Gradient Solution
 
 Add a class to the code you want to fix. 
 In the code :
 `<p class="keep-white" style="color:#ffffff;">This text will remain WHITE</p>`
-In the style :
+
+In the style block:
 ```
 <!--[if gte mso 16]>
     <style>
@@ -74,29 +79,32 @@ In the style :
 <![endif]-->
 ```
 
-### Darkmode : VML
+### Darkmode : Keeps colors unchanged on VML
 
 **solution 1**
+
 ```
 mso-style-textfill-fill-color:#ffffff;
 ```
 
 **solution 2**
 
- use CSS positioning and z-index to layer your email content over the top of your VML content, keeping your text content separate from your VML. 
- use the `mso-style-textfill-type:gradient` trick
+- use CSS positioning and z-index to layer your email content over the top of your VML content, keeping your text content separate from your VML. 
+- use the `mso-style-textfill-type:gradient` trick
  
 **solution 3**
 
  **If You Need White Text**
-Body background must be #555555 or lighter
-VML fill must be `#333333` or darker
-example : 
+- Body background must be #555555 or lighter
+- VML fill must be `#333333` or darker
+Example :
+
 ```
 <body style="background-color:#555555;">
 ```
-  or in the style block
-  ```
+Or in the style block
+  
+```
   <!--[if gte mso 16]>
     <style>
         body {
@@ -111,17 +119,18 @@ example :
 ```
 <v:rect fillcolor="#333333">` or `<v:fill type="frame" src="image.jpg" color="#333333" />
 ```
-  then in the code
+Then in the code
+ 
  ```
  <p style="margin:0;color:#ffffff;mso-color-alt:auto;">White text</p>
  ```
-  
-  or with a class
+
+Or with a class
 ```
 <p class="vml-white" style="margin:0;color:#ffffff;">White text</p>
 ```
-  and in the style block
-  ```
+And in the style block
+```
   <!--[if gte mso 16]>
     <style>
         .vml-white {
@@ -132,6 +141,7 @@ example :
 ```
   
 **If You Need Black Text**
+
 Body background must be #444444 or darker
 VML fill must be #555555 or lighter
 
@@ -139,8 +149,8 @@ example : direclty on a container tag
 ```
 <body style="background-color:#444444;">
 ```
-or in the style block
-  ```
+Or in the style block
+```
   <!--[if gte mso 16]>
     <style>
         body {
@@ -157,21 +167,22 @@ or in the style block
 or 
 ```
 <v:fill type="frame" src="image.jpg" color="#555555" />
-```
-  
+```  
 
-and in the html
+And in the html
+
 ```
 <p style="margin:0;color:#000000;mso-color-alt:auto;">Black text</p>
 ```
   
-  or with a class :
+Or with a class :
   
 ```
 <p class="vml-black" style="margin:0;color:#000000;">Black text</p>
 ```
   
-  and in the style block : 
+And in the style block : 
+
 ```
 <!--[if gte mso 16]>
     <style>
@@ -189,7 +200,7 @@ and in the html
   ### In Outlook for Windows in Dark Mode
   Make the <a> tag’s background transparent for Outlook only. You can do this by adding conditional CSS to the head of your email.
 
-For example, if you have a link like this with a class of buttonlink: <a class="buttonlink"> you would include the following in the head of your email:
+For example, if you have a link like this with a class of buttonlink: '<a class="buttonlink">' you would include the following in the head of your email:
   
 ```
 <!--[if mso]>
@@ -198,7 +209,7 @@ For example, if you have a link like this with a class of buttonlink: <a class="
     </style>
 <![endif]-->
 ```
-### Fix Buttons Disappearing Into the Background in Dark Mode in the Gmail App for iOS/Android, the Outlook App for iOS/Android, in Outlook for Mac and at Outlook.com
+### Fix Buttons Disappearing Into the Background in Dark Mode : Gmail App for iOS/Android / Outlook App for iOS/Android / Outlook for Mac / at Outlook.com
   
 These email clients will keep your button dark but flip the body background to be dark as well. Suddenly, your dark button’s edges are invisible.
   
