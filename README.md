@@ -4,7 +4,7 @@ These different techniques for dark mode were initiated by Nicole Merlin, Remi P
 
 ## Darkmode : Outlook 365 dark mode
 
-### the MSO Gradient Solution
+### MSO Gradient Solution
 
 Add a class to the code you want to fix. 
 In the code :
@@ -182,13 +182,15 @@ For example, if you have a link like this with a class of buttonlink: <a class="
   ### Using Different Elements to Fix Border Problems in Outlook for Mac
   Outlook for Mac does tend to invert border colors but it keeps dark backgrounds dark
   
-  **Try Outline if You Are Working With Square Edges**
+- Try Outline if You Are Working With Square Edges
+		
   ```
 	<td style="outline:2px solid #ffffff;border:2px solid #000000;">
 		```
-  **Try a Box-Shadow**
+- Try a Box-Shadow
+		
   ```
 		box-shadow: 0px 0px 0px 2px #ffffff;` or `box-shadow: inset 0px 0px 0px 2px #ffffff;
 		```
-  **Try Using CSS Blend Modes**
+- Try Using CSS Blend Modes
   
