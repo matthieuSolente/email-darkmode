@@ -1,5 +1,5 @@
 # EMAIL-DARKMODE
-These different techniques for dark mode were initiated by Nicole Merlin, Remi Parmentier, Mark Robbins or Annet Forcier etc, and here is a summary of all these techniques known and still functional in 2022. I will do my best to keep this page up to date, please not to point out errors or deprecated elements over time.
+These different techniques for dark mode were initiated by Nicole Merlin, Remi Parmentier, Mark Robbins and some other email geeks, and here is a summary of all these techniques known and still functional in 2022. I will do my best to keep this page up to date, please not to point out errors or deprecated elements over time.
 
 **NO SUPPORT: Gmail app and Windows 10 mail. ** 
 
@@ -192,11 +192,21 @@ And in the style block :
     </style>
 <![endif]-->
 ```
+
+
+
+-webkit-border-before: 2px solid #000000 !important; (use for top border) -webkit-border-after: 2px solid #000000 !important; (use for bottom border) -webkit-border-start: 2px solid #000000 !important; (use for left border) -webkit-border-end: 2px solid #000000 !important; (use for right border)
   ### Buttons
   
   #### Fix Buttons With a Different Colour Behind the Text in Dark Mode in Outlook.com Webmail, Outlook for iOS, or Outlook for Android
   Make the border transparent, e.g. border: 8px solid transparent so that only the background colour of the link element shows through
   
+  in the case of a vml button, if the borders of the html link stand out or if the background of the link is different, simply add the following rule:
+
+<!--[if mso]> <style type="text/css">
+.btn{background:transparent !important;border:none !important} </style> <![endif]-->
+For borders, include original border style plus...
+
   ### In Outlook for Windows in Dark Mode
   Make the <a> tag’s background transparent for Outlook only. You can do this by adding conditional CSS to the head of your email.
 
@@ -209,6 +219,7 @@ For example, if you have a link like this with a class of buttonlink: '<a class=
     </style>
 <![endif]-->
 ```
+
 ### Fix Buttons Disappearing Into the Background in Dark Mode : Gmail App for iOS/Android / Outlook App for iOS/Android / Outlook for Mac / at Outlook.com
   
 These email clients will keep your button dark but flip the body background to be dark as well. Suddenly, your dark button’s edges are invisible.
@@ -229,6 +240,13 @@ Example in the style block
         .borders {border-color: #fafafa !important;}
     }
 </style>
+```
+For borders, include original border style plus...
+```
+-webkit-border-before: 2px solid #000000 !important; (use for top border) 
+-webkit-border-after: 2px solid #000000 !important; (use for bottom border) 
+-webkit-border-start: 2px solid #000000 !important; (use for left border) 
+-webkit-border-end: 2px solid #000000 !important; (use for right border)
 ```
 
 #### Using Data Attributes to Fix Borders in Dark Mode in outlook.com and the Outlook Apps for iOS/Android
@@ -326,3 +344,16 @@ A common hack to add a white shadow around an image in dark mode Office 365 Dark
   drop-shadow(0px 0px 10px rgba(255,255,255,0.6));} 
 } 
 ```
+
+##others techniques
+	
+For background colors, use a one color gradient:
+
+background-image: 
+```
+linear-gradient(#ffffff,#ffffff)
+```
+
+For text, use this along with your standard color style:
+
+-webkit-text-fill-color: #ffffff !important;
