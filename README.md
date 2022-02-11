@@ -193,22 +193,19 @@ And in the style block :
 <![endif]-->
 ```
 
-
-
--webkit-border-before: 2px solid #000000 !important; (use for top border) -webkit-border-after: 2px solid #000000 !important; (use for bottom border) -webkit-border-start: 2px solid #000000 !important; (use for left border) -webkit-border-end: 2px solid #000000 !important; (use for right border)
-  ### Buttons
+### Buttons
   
-  #### Fix Buttons With a Different Colour Behind the Text in Dark Mode in Outlook.com Webmail, Outlook for iOS, or Outlook for Android
-  Make the border transparent, e.g. border: 8px solid transparent so that only the background colour of the link element shows through
+#### Fix Buttons With a Different Colour Behind the Text in Dark Mode in Outlook.com Webmail, Outlook for iOS, or Outlook for Android
+Make the border transparent, e.g. border: 8px solid transparent so that only the background colour of the link element shows through
   
-  in the case of a vml button, if the borders of the html link stand out or if the background of the link is different, simply add the following rule:
+In the case of a vml button, if the borders of the html link stand out or if the background of the link is different, simply add the following rule:
 
 <!--[if mso]> <style type="text/css">
 .btn{background:transparent !important;border:none !important} </style> <![endif]-->
 For borders, include original border style plus...
 
-  ### In Outlook for Windows in Dark Mode
-  Make the <a> tag’s background transparent for Outlook only. You can do this by adding conditional CSS to the head of your email.
+### In Outlook for Windows in Dark Mode
+Make the <a> tag’s background transparent for Outlook only. You can do this by adding conditional CSS to the head of your email.
 
 For example, if you have a link like this with a class of buttonlink: '<a class="buttonlink">' you would include the following in the head of your email:
   
