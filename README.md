@@ -273,13 +273,6 @@ Example in the style block
     }
 </style>
 ```
-For borders, include original border style plus...
-```
--webkit-border-before: 2px solid #000000 !important; (use for top border) 
--webkit-border-after: 2px solid #000000 !important; (use for bottom border) 
--webkit-border-start: 2px solid #000000 !important; (use for left border) 
--webkit-border-end: 2px solid #000000 !important; (use for right border)
-```
 
 #### Using Data Attributes to Fix Borders in Dark Mode in outlook.com and the Outlook Apps for iOS/Android
 
@@ -348,13 +341,16 @@ For more informations on all theses techniques, please check : [Darkmode Problem
 For more information on blend mode please check [Remi Parmentier](https://www.hteumeuleu.com/2021/fixing-gmail-dark-mode-css-blend-modes/)
 	
 
-## image color inersion (hack from Jay Oram)
+## Image color inersion (hack from Jay Oram)
 	
 ```
 @media (prefers-color-scheme: dark) {
 .foo {filter: brightness(0) invert(1);} 
 }
 ```
+
+
+## Others techniques
 
 A common hack to add a white shadow around an image in dark mode Office 365 Dark Mac OS
 
@@ -365,16 +361,24 @@ A common hack to add a white shadow around an image in dark mode Office 365 Dark
   drop-shadow(0px 0px 10px rgba(255,255,255,0.6));} 
 } 
 ```
-
-##others techniques
 	
 For background colors, use a one color gradient:
 
-background-image: 
 ```
-linear-gradient(#ffffff,#ffffff)
+background-image: linear-gradient(#ffffff,#ffffff)
 ```
 
 For text, use this along with your standard color style:
 
+```
 -webkit-text-fill-color: #ffffff !important;
+```
+	
+For borders, include original border style plus...
+
+```
+-webkit-border-before: 2px solid #000000 !important; (use for top border) 
+-webkit-border-after: 2px solid #000000 !important; (use for bottom border) 
+-webkit-border-start: 2px solid #000000 !important; (use for left border) 
+-webkit-border-end: 2px solid #000000 !important; (use for right border)
+```
