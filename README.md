@@ -35,6 +35,7 @@ mso-style-textfill-fill-color:#ffffff;
  use the `mso-style-textfill-type:gradient` trick
  
 **solution 3**
+
  **If You Need White Text**
 Body background must be #555555 or lighter
 VML fill must be `#333333` or darker
