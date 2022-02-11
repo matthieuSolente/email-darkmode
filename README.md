@@ -156,6 +156,7 @@ For example, if you have a link like this with a class of buttonlink: <a class="
   ### Using Media Queries to Control Borders in Dark Mode in Apple Mail (iOS and macOS)
   
   Example in the style block 
+	
   ```
   <style>
     @media (prefers-color-scheme: dark) {
@@ -167,10 +168,12 @@ For example, if you have a link like this with a class of buttonlink: <a class="
 ### Using Data Attributes to Fix Borders in Dark Mode in outlook.com and the Outlook Apps for iOS/Android
 
 	In the code
+	
   ```
 	<td class="oldotcom-border" style="border:2px solid #000000;padding:30px 40px;">
 		```
   In the style block :
+		
   ```
   <style>
     [data-ogsc] .oldotcom-border, 
