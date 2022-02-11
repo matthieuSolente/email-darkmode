@@ -162,7 +162,7 @@ For example, if you have a link like this with a class of buttonlink: <a class="
         .borders {border-color: #fafafa !important;}
     }
 </style>
-```
+	```
 
 ### Using Data Attributes to Fix Borders in Dark Mode in outlook.com and the Outlook Apps for iOS/Android
 
