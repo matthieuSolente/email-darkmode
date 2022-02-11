@@ -8,9 +8,10 @@ These different techniques for dark mode were initiated by Nicole Merlin, Remi P
 
 Add a class to the code you want to fix. 
 In the code :
-'<p class="keep-white" style="color:#ffffff;">This text will remain WHITE</p>'
+`<p class="keep-white" style="color:#ffffff;">This text will remain WHITE</p>`
 In the style :
-'<!--[if gte mso 16]>
+```
+<!--[if gte mso 16]>
     <style>
         .keep-white {
             mso-style-textfill-type:gradient;
@@ -18,7 +19,8 @@ In the style :
             color:#000000 !important;
         }
     </style>
-<![endif]-->'
+<![endif]-->
+```
 
 ## Darkmode : VML
 
@@ -36,13 +38,14 @@ VML fill must be #333333 or darker
 example : 
 `<body style="background-color:#555555;">`
   or in the style block
-  '<!--[if gte mso 16]>
+  ```
+  <!--[if gte mso 16]>
     <style>
         body {
             background-color:#555555 !important;
         }
     </style>
-<![endif]-->`
+<![endif]-->```
   
   Then ensure your vml element is dark
   
@@ -51,7 +54,7 @@ example :
  ```<p style="margin:0;color:#ffffff;mso-color-alt:auto;">White text</p>```
   
   or with a class
-```<p class="vml-white" style="margin:0;color:#ffffff;">White text</p>```
+`<p class="vml-white" style="margin:0;color:#ffffff;">White text</p>`
   and in the style block
   ```<!--[if gte mso 16]>
     <style>
@@ -66,34 +69,38 @@ Body background must be #444444 or darker
 VML fill must be #555555 or lighter
 
 example : 
-```<body style="background-color:#444444;">``` or
-  ```<!--[if gte mso 16]>
+`<body style="background-color:#444444;">` or
+  ```
+  <!--[if gte mso 16]>
     <style>
         body {
             background-color:#444444 !important;
         }
     </style>
-<![endif]-->```
+<![endif]-->
+```
+  In the vml shape
   
-  
-```<v:rect fillcolor="#555555">'   or '<v:fill type="frame" src="image.jpg" color="#555555" />```
+`<v:rect fillcolor="#555555">'   or '<v:fill type="frame" src="image.jpg" color="#555555" />`
   
 
-
-```<p style="margin:0;color:#000000;mso-color-alt:auto;">Black text</p>```
+and in the html
+`<p style="margin:0;color:#000000;mso-color-alt:auto;">Black text</p>`
   
   or with a class :
   
-```<p class="vml-black" style="margin:0;color:#000000;">Black text</p>```
+`<p class="vml-black" style="margin:0;color:#000000;">Black text</p>`
   
   and in the style block : 
-```<!--[if gte mso 16]>
+```
+<!--[if gte mso 16]>
     <style>
         .vml-black {
             mso-color-alt: auto;
         }
     </style>
-<![endif]-->```
+<![endif]-->
+```
   ##buttons
   ### Fix Buttons With a Different Colour Behind the Text in Dark Mode in Outlook.com Webmail, Outlook for iOS, or Outlook for Android
   Make the border transparent, e.g. border: 8px solid transparent so that only the background colour of the link element shows through
@@ -102,11 +109,13 @@ example :
 
 For example, if you have a link like this with a class of buttonlink: <a class="buttonlink"> you would include the following in the head of your email:
   
-```<!--[if mso]>
+```
+<!--[if mso]>
     <style>
         .buttonlink {background: transparent !important;}
     </style>
-<![endif]-->```
+<![endif]-->
+```
   ###Fix Buttons Disappearing Into the Background in Dark Mode in the Gmail App for iOS/Android, the Outlook App for iOS/Android, in Outlook for Mac and at Outlook.com
   These email clients will keep your button dark but flip the body background to be dark as well. Suddenly, your dark button’s edges are invisible.
   
@@ -119,29 +128,33 @@ For example, if you have a link like this with a class of buttonlink: <a class="
   ###Using Media Queries to Control Borders in Dark Mode in Apple Mail (iOS and macOS)
   
   in the style block 
-  ```<style>
+  ```
+  <style>
     @media (prefers-color-scheme: dark) {
         .borders {border-color: #fafafa !important;}
     }
-</style>```
+</style>
+```
 
 ###Using Data Attributes to Fix Borders in Dark Mode in outlook.com and the Outlook Apps for iOS/Android
 
 	In the code
-  ```<td class="oldotcom-border" style="border:2px solid #000000;padding:30px 40px;">```
+  `<td class="oldotcom-border" style="border:2px solid #000000;padding:30px 40px;">`
   In the style block :
-  ```<style>
+  ```
+  <style>
     [data-ogsc] .oldotcom-border, 
     [data-ogsc] .oldotcom-border .btnlink {
         border: 2px solid white !important;
     }
-</style>```
+</style>
+```
   ###Using Different Elements to Fix Border Problems in Outlook for Mac
   Outlook for Mac does tend to invert border colors but it keeps dark backgrounds dark
   
   **Try Outline if You Are Working With Square Edges**
-  ```<td style="outline:2px solid #ffffff;border:2px solid #000000;">```
+  `<td style="outline:2px solid #ffffff;border:2px solid #000000;">`
   **Try a Box-Shadow**
-  ```box-shadow: 0px 0px 0px 2px #ffffff;``` or ```box-shadow: inset 0px 0px 0px 2px #ffffff; ```
+  `box-shadow: 0px 0px 0px 2px #ffffff;` or `box-shadow: inset 0px 0px 0px 2px #ffffff; `
   **Try Using CSS Blend Modes**
   
