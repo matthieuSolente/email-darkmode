@@ -34,7 +34,7 @@ solution 2
 Body background must be #555555 or lighter
 VML fill must be #333333 or darker
 example : 
-```<body style="background-color:#555555;">'  
+```<body style="background-color:#555555;">```
   or in the style block
   '<!--[if gte mso 16]>
     <style>
@@ -46,14 +46,14 @@ example :
   
   Then ensure your vml element is dark
   
-```<v:rect fillcolor="#333333">' or '<v:fill type="frame" src="image.jpg" color="#333333" />```
+```<v:rect fillcolor="#333333">``` or ```<v:fill type="frame" src="image.jpg" color="#333333" />```
   then in the code
  ```<p style="margin:0;color:#ffffff;mso-color-alt:auto;">White text</p>```
   
   or with a class
-```<p class="vml-white" style="margin:0;color:#ffffff;">White text</p>'
+```<p class="vml-white" style="margin:0;color:#ffffff;">White text</p>```
   and in the style block
-  '<!--[if gte mso 16]>
+  ```<!--[if gte mso 16]>
     <style>
         .vml-white {
             mso-color-alt: auto;
@@ -66,8 +66,8 @@ Body background must be #444444 or darker
 VML fill must be #555555 or lighter
 
 example : 
-```<body style="background-color:#444444;">' or
-  '<!--[if gte mso 16]>
+```<body style="background-color:#444444;">``` or
+  ```<!--[if gte mso 16]>
     <style>
         body {
             background-color:#444444 !important;
