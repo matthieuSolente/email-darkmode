@@ -58,6 +58,41 @@ Then in the html :
 
 For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
 
+## Image swap (hack from Mark Robbins)
+This technique will work on Apple Mail, Outlook for Mac	
+```
+<picture>
+  <source srcset="dark-img.png" media="(prefers-color-scheme: dark)">
+  <img src="light-img.png" alt="Alt Text!" style="">
+</picture>
+```
+For more information on image swap, please check [Mark Robbins](https://www.goodemailcode.com/email-enhancements/picture)
+
+## Image swap (hack from Remi Parmentier)
+
+In the html:
+```
+<div style="margin:auto; text-align:center; width:205px; height:165px;" class="email-picture">
+<picture>
+	<source srcset="https://www.hteumeuleu.fr/wp-content/uploads/2021/10/ddg-logo-dark.png" media="(prefers-color-scheme:dark)" />
+	<img src="https://www.hteumeuleu.fr/wp-content/uploads/2021/10/ddg-logo-light.png" width="205" height="165" alt="DuckDuckGo" style="vertical-align:middle; max-width:100%; height:auto; font:1em sans-serif; color:#000;" />
+</picture>
+</div>
+```
+In the style block :
+```
+@media (prefers-color-scheme:dark) {
+	.email-dark-background:not([class^="x_"]) { color:#fff !important; background-color:#1c1c1c !important; }
+	.email-picture:not([class^="x_"]) img { color:#fff !important; }
+}
+</style>
+<style id="css-dark-mode-outlook-com">
+	[data-ogsb] { color:#fff !important; background-color:#1c1c1c !important; }
+	[data-ogsb] .email-picture { background:url('https://www.hteumeuleu.fr/wp-content/uploads/2021/10/ddg-logo-dark.png') no-repeat center; background-size:contain; }
+	[data-ogsb] .email-picture img { visibility:hidden; }
+</style>
+```
+
 ## Darkmode : Outlook 365 dark mode (All code from Nicole Merlin)
 
 ### MSO Gradient Solution
@@ -311,17 +346,6 @@ For more informations on all theses techniques, please check : [Darkmode Problem
 </html>
 ```
 For more information on blend mode please check [Remi Parmentier](https://www.hteumeuleu.com/2021/fixing-gmail-dark-mode-css-blend-modes/)
-	
-
-## Image swap (hack from Mark Robbins)
-	
-```
-<picture>
-  <source srcset="dark-img.png" media="(prefers-color-scheme: dark)">
-  <img src="light-img.png" alt="Alt Text!" style="">
-</picture>
-```
-For more information on image swap, please check [Mark Robbins](https://www.goodemailcode.com/email-enhancements/picture)
 	
 
 ## image color inersion (hack from Jay Oram)
