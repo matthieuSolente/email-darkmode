@@ -447,7 +447,7 @@ For more information on blend mode please check [Remi Parmentier](https://www.ht
 .foo {filter: brightness(0) invert(1);} 
 }
 ```
-
+For more information, please check [Jay Oram](https://www.emailtalk.fm/episodes/08-dark-mode-w-jay-oram)
 
 ## Others techniques
 
