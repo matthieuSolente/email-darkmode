@@ -440,7 +440,8 @@ For more information on blend mode please check [Remi Parmentier](https://www.ht
 	
 
 ## Image color inersion (hack from Jay Oram)
-	
+>This works on 
+- :heavy_check_mark:Office 365 Dark (macOS)
 ```
 @media (prefers-color-scheme: dark) {
 .foo {filter: brightness(0) invert(1);} 
