@@ -21,7 +21,7 @@ for other darkmode clients, here are some hacks
 - :x: Outlook - Chrome (dark)
 
 
-Mac OS Monterrey, Big Sur, Mojave no changes.
+Mac OS Monterrey, Big Sur, Mojave no changes in light mode
 
 In the head
 ```
@@ -77,7 +77,7 @@ Exact same result as above with less code !
 - :x: iPhone 12 - Gmail iOS 14 (dark)
 - :x: Outlook - Chrome (dark)
 
-Mac OS Monterrey, Big Sur, Mojave no changes.
+Mac OS Monterrey, Big Sur, Mojave no changes in light mode
 
 ```
 <picture>
@@ -104,7 +104,7 @@ Exact same result as above + Outlook - Chrome (dark) support
 - :x: iPhone 12 - Gmail iOS 14 (dark)  
 
 
-Mac OS Monterrey, Big Sur, Mojave no changes.
+Mac OS Monterrey, Big Sur, Mojave no changes in light mode
 
 
 In the html:
