@@ -7,16 +7,19 @@ for other darkmode clients, here are some hacks
 
 
 ## Image Swap (Code from Litmus team)
-This works on 
-- Andoird 10 Gmail Dark 
-- Iphone SE Dark Outlook 
-- Office 365 Dark Mac OS
 
-Don't works on
-- Android 12 gmail dark
-- Outlook chrome dark webmail
-- Iphone 12 ios 14 force Darkmode
-- Office 365 Dark Windows
+>This works on 
+- :heavy_check_mark: Office 365 Dark (macOS)
+- :heavy_check_mark: Android 10 - Gmail Dark  
+- :heavy_check_mark: iPhone SE dark - Outlook 
+
+>Don't works on
+- :x: Android 12 - Gmail Dark 
+- :x: Office 365 Dark - (win)
+- :x: iPhone 12 iOS 14 (force dark) 
+- :x: iPhone 12 - Gmail iOS 14 (dark)
+- :x: Outlook - Chrome (dark)
+
 
 Mac OS Monterrey, Big Sur, Mojave no changes.
 
@@ -62,16 +65,17 @@ For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https:
 ## Image swap (hack from Mark Robbins)
 
 Exact same result as above with less code !
-This works on 
-- Andoird 10 Gmail Dark 
-- Iphone SE Dark Outlook 
-- Office 365 Dark Mac OS
+>This works on 
+- :heavy_check_mark: Office 365 Dark (macOS)
+- :heavy_check_mark: Android 10 - Gmail Dark  
+- :heavy_check_mark: iPhone SE dark - Outlook 
 
-Don't works on
-- Android 12 gmail dark
-- Outlook chrome dark webmail
-- Iphone 12 ios 14 force Darkmode
-- Office 365 Dark Windows
+>Don't works on
+- :x: Android 12 - Gmail Dark 
+- :x: Office 365 Dark - (win)
+- :x: iPhone 12 iOS 14 (force dark) 
+- :x: iPhone 12 - Gmail iOS 14 (dark)
+- :x: Outlook - Chrome (dark)
 
 Mac OS Monterrey, Big Sur, Mojave no changes.
 
@@ -85,18 +89,19 @@ For more information on image swap, please check [Mark Robbins](https://www.good
 
 ## Image swap (hack from Remi Parmentier)
 
-Exact same result as above + Office 365 Dark Webmail support
+Exact same result as above + Outlook - Chrome (dark) support
 
-This works on 
-- Andoird 10 Gmail Dark 
-- Iphone SE Dark Outlook 
-- Office 365 Dark Mac OS
-- Office 365 Dark Webmail
+>This works on 
+- :heavy_check_mark: Office 365 Dark (macOS)
+- :heavy_check_mark: Android 10 - Gmail Dark  
+- :heavy_check_mark: Outlook - Chrome (dark)
+- :heavy_check_mark: iPhone SE dark - Outlook 
 
-Don't works on
-- Android 12 gmail dark
-- Outlook chrome dark webmail
-- Iphone 12 ios 14 force Darkmode
+>Don't works on
+- :x: Android 12 - Gmail Dark 
+- :x: Office 365 Dark - (win)
+- :x: iPhone 12 iOS 14 (force dark) 
+- :x: iPhone 12 - Gmail iOS 14 (dark)  
 
 
 Mac OS Monterrey, Big Sur, Mojave no changes.
@@ -132,12 +137,14 @@ In the style block :
 ```
 to see the live codepen [hteumeuleu](https://codepen.io/hteumeuleu/pen/porJdjR)
 
-## Darkmode : Outlook 365 dark mode (All code from Nicole Merlin)
+## Darkmode : Fixing problems in dark mode (hacks from Nicole Merlin)
 
 ### MSO Gradient Solution to keep text colors in html
+- :heavy_check_mark: Office 365 Dark (Win)
 
 Add a class to the code you want to fix. 
-In the code :
+For example, for a white text, in the code :
+
 `<p class="keep-white" style="color:#ffffff;">This text will remain WHITE</p>`
 
 In the style block:
@@ -152,8 +159,25 @@ In the style block:
     </style>
 <![endif]-->
 ```
+Or for a black text, in the code:
 
-### Darkmode : Solution to Keep text colors on VML
+`<p class="keep-black" style="color:#000000;">This text will remain BLACK</p>`
+
+In the style block:
+```
+<!--[if gte mso 16]>
+    <style>
+        .keep-black {
+            mso-style-textfill-type:gradient;
+	    mso-style-textfill-fill-gradientfill-stoplist:"0 \#000000 1 100000\,99000 \#000000 1 100000";
+            color:#ffffff !important;
+        }
+    </style>
+<![endif]-->
+```
+
+### Different Solutions to Keep text colors on VML
+- :heavy_check_mark: All Outlook that support VML
 
 **solution 1**
 
@@ -176,6 +200,7 @@ Example :
 ```
 <body style="background-color:#555555;">
 ```
+
 Or in the style block
   
 ```
@@ -187,22 +212,17 @@ Or in the style block
     </style>
 <![endif]-->
 ```
-  
-  Then ensure your vml element is dark
+
+Then ensure your vml element is dark
   
 ```
 <v:rect fillcolor="#333333">` or `<v:fill type="frame" src="image.jpg" color="#333333" />
 ```
-Then in the code
- 
- ```
- <p style="margin:0;color:#ffffff;mso-color-alt:auto;">White text</p>
- ```
 
-Or with a class
-```
-<p class="vml-white" style="margin:0;color:#ffffff;">White text</p>
-```
+Then in the code `<p style="margin:0;color:#ffffff;mso-color-alt:auto;">White text</p>` 
+
+Or with a class `<p class="vml-white" style="margin:0;color:#ffffff;">White text</p>`
+
 And in the style block
 ```
   <!--[if gte mso 16]>
@@ -220,9 +240,8 @@ Body background must be #444444 or darker
 VML fill must be #555555 or lighter
 
 example : direclty on a container tag
-```
-<body style="background-color:#444444;">
-```
+`<body style="background-color:#444444;">`
+
 Or in the style block
 ```
   <!--[if gte mso 16]>
@@ -235,25 +254,19 @@ Or in the style block
 ```
   And in the vml shape
   
-```
-<v:rect fillcolor="#555555">
-```
+`<v:rect fillcolor="#555555">`
+
 or 
-```
-<v:fill type="frame" src="image.jpg" color="#555555" />
-```  
+
+`<v:fill type="frame" src="image.jpg" color="#555555" />`  
 
 And in the html
 
-```
-<p style="margin:0;color:#000000;mso-color-alt:auto;">Black text</p>
-```
+`<p style="margin:0;color:#000000;mso-color-alt:auto;">Black text</p>`
   
 Or with a class :
   
-```
-<p class="vml-black" style="margin:0;color:#000000;">Black text</p>
-```
+`<p class="vml-black" style="margin:0;color:#000000;">Black text</p>`
   
 And in the style block : 
 
@@ -269,16 +282,18 @@ And in the style block :
 
 ### Buttons
   
-#### Fix Buttons With a Different Colour Behind the Text in Dark Mode in Outlook.com Webmail, Outlook for iOS, or Outlook for Android
+#### Fix Buttons With a Different Colour Behind the Text in Dark Mode 
+
+>This work on:
+- :heavy_check_mark: Outlook.com Webmail, 
+- :heavy_check_mark: Outlook for iOS, 
+- :heavy_check_mark: Outlook for Android
+
 Make the border transparent, e.g. border: 8px solid transparent so that only the background colour of the link element shows through
-  
-In the case of a vml button, if the borders of the html link stand out or if the background of the link is different, simply add the following rule:
 
-<!--[if mso]> <style type="text/css">
-.btn{background:transparent !important;border:none !important} </style> <![endif]-->
-For borders, include original border style plus...
+>This work on
+- :heavy_check_mark: Office 365 Dark (Win)
 
-### In Outlook for Windows in Dark Mode
 Make the <a> tag’s background transparent for Outlook only. You can do this by adding conditional CSS to the head of your email.
 
 For example, if you have a link like this with a class of buttonlink: '<a class="buttonlink">' you would include the following in the head of your email:
@@ -291,7 +306,13 @@ For example, if you have a link like this with a class of buttonlink: '<a class=
 <![endif]-->
 ```
 
-### Fix Buttons Disappearing Into the Background in Dark Mode : Gmail App for iOS/Android / Outlook App for iOS/Android / Outlook for Mac / at Outlook.com
+### Fix Buttons Disappearing Into the Background in Dark Mode
+
+>This works on 
+- :heavy_check_mark: Gmail App for iOS/Android
+- :heavy_check_mark: Outlook App for iOS/Android  
+- :heavy_check_mark: Outlook for Mac
+- :heavy_check_mark: Outlook.com
   
 These email clients will keep your button dark but flip the body background to be dark as well. Suddenly, your dark button’s edges are invisible.
   
@@ -302,7 +323,10 @@ These email clients will keep your button dark but flip the body background to b
   
 ### Borders
 
-#### Using Media Queries to Control Borders in Dark Mode in Apple Mail (iOS and macOS)
+#### Using Media Queries to Control Borders in Dark Mode
+	
+>This work on
+- :heavy_check_mark: Apple Mail (iOS and macOS)
 	
 Example in the style block 
 ```
@@ -313,7 +337,12 @@ Example in the style block
 </style>
 ```
 
-#### Using Data Attributes to Fix Borders in Dark Mode in outlook.com and the Outlook Apps for iOS/Android
+#### Using Data Attributes to Fix Borders in Dark Mode
+	
+>This work on
+- :heavy_check_mark: outlook.com
+- :heavy_check_mark: Outlook Apps for iOS
+- :heavy_check_mark: Outlook Apps for Android
 
 In the code
 	
@@ -330,19 +359,49 @@ In the code
     }
 </style>
 ```
-#### Using Different Elements to Fix Border Problems in Outlook for Mac
-  Outlook for Mac does tend to invert border colors but it keeps dark backgrounds dark
-  
+
+### Fix Border Problems in Outlook for Mac
+
+>This work on
+- :heavy_check_mark: Outlook for Mac
+
+ Outlook for Mac does tend to invert border colors but it keeps dark backgrounds dark on tables and cells, but not on divs, paragraphs or link tags. So where possible, add borders to div.
+
+### Fix Border Problems in Outlook for Windows
+
+>This work on
+- :heavy_check_mark: Outlook for Windows
+
+Try Outlook specific code for borders, or use `mso-border-alt`:
+	
+```border:2px solid #000000;mso-border-alt:2px solid #ffffff;```
+
+	
+#### Different Elements to Fix Border Problems 
+
+- Try to adjust colors slightly eg `#ffffff` to `#fafafa` or `#000000` to `#111111`.
+	
 - Try Outline if You Are Working With Square Edges
+
+>This work on
+- :heavy_check_mark: Windows Live Mail
+- :heavy_check_mark: Gmail app (iOS)
+- :heavy_check_mark: Microsoft365 Outlook for Windows
 		
 ```
 <td style="outline:2px solid #ffffff;border:2px solid #000000;">
 ```
 - Try a Box-Shadow
+
+>This work on
+- :heavy_check_mark: Apple Mail (iOS)
+- :heavy_check_mark: Apple Mail (macOS)
+- :heavy_check_mark: Outlook for Mac
 		
  ```
 box-shadow: 0px 0px 0px 2px #ffffff;` or `box-shadow: inset 0px 0px 0px 2px #ffffff;
 ```
+
 - Try Using CSS Blend Modes
 	
 For more informations on all theses techniques, please check : [Darkmode Problems](https://webdesign.tutsplus.com/tutorials/how-to-fix-outlook-dark-mode-problems--cms-37718)
@@ -391,7 +450,10 @@ For more information on blend mode please check [Remi Parmentier](https://www.ht
 
 ## Others techniques
 
-A common hack to add a white shadow around an image in dark mode Office 365 Dark Mac OS
+A common hack to add a white shadow around an image in dark mode
+
+>This works on 
+- :heavy_check_mark: Office 365 Dark (macOS)
 
 ```	
 @media (prefers-color-scheme: dark) {
@@ -402,10 +464,17 @@ A common hack to add a white shadow around an image in dark mode Office 365 Dark
 ```
 	
 For background colors, use a one color gradient:
+>This works on 
+- :heavy_check_mark: Apple Mail (iOS)
+- :heavy_check_mark: Apple Mail (macOS)  
+- :heavy_check_mark: Gmail app (Android) 
+- :heavy_check_mark: Gmail app (iOS)
+- :heavy_check_mark: Outlook for Mac
 
 ```
 background-image: linear-gradient(#ffffff,#ffffff)
 ```
+### To be tested
 
 For text, use this along with your standard color style:
 
