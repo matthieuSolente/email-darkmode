@@ -134,7 +134,7 @@ to see the live codepen [hteumeuleu](https://codepen.io/hteumeuleu/pen/porJdjR)
 
 ## Darkmode : Outlook 365 dark mode (All code from Nicole Merlin)
 
-### MSO Gradient Solution to keep colors on text
+### MSO Gradient Solution to keep text colors in html
 
 Add a class to the code you want to fix. 
 In the code :
@@ -153,7 +153,7 @@ In the style block:
 <![endif]-->
 ```
 
-### Darkmode : Keeps colors unchanged on VML
+### Darkmode : Solution to Keep text colors on VML
 
 **solution 1**
 
