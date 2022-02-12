@@ -12,12 +12,13 @@ This works on
 - Iphone SE Dark Outlook 
 - Office 365 Dark Mac OS
 
-Don't work on
+Don't works on
 - Android 12 gmail dark
 - Outlook chrome dark webmail
 - Iphone 12 ios 14 force Darkmode
 - Office 365 Dark Windows
-- Mac OS Monterrey, Big Sur, Mojave no changes.
+
+Mac OS Monterrey, Big Sur, Mojave no changes.
 
 In the head
 ```
@@ -59,7 +60,21 @@ Then in the html :
 For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
 
 ## Image swap (hack from Mark Robbins)
-This technique will work on Apple Mail, Outlook for Mac	
+
+Exact same result as above with less code !
+This works on 
+- Andoird 10 Gmail Dark 
+- Iphone SE Dark Outlook 
+- Office 365 Dark Mac OS
+
+Don't works on
+- Android 12 gmail dark
+- Outlook chrome dark webmail
+- Iphone 12 ios 14 force Darkmode
+- Office 365 Dark Windows
+
+Mac OS Monterrey, Big Sur, Mojave no changes.
+
 ```
 <picture>
   <source srcset="dark-img.png" media="(prefers-color-scheme: dark)">
@@ -70,13 +85,36 @@ For more information on image swap, please check [Mark Robbins](https://www.good
 
 ## Image swap (hack from Remi Parmentier)
 
+Exact same result as above + Office 365 Dark Webmail support
+
+This works on 
+- Andoird 10 Gmail Dark 
+- Iphone SE Dark Outlook 
+- Office 365 Dark Mac OS
+- Office 365 Dark Webmail
+
+Don't works on
+- Android 12 gmail dark
+- Outlook chrome dark webmail
+- Iphone 12 ios 14 force Darkmode
+
+
+Mac OS Monterrey, Big Sur, Mojave no changes.
+
+
 In the html:
 ```
+<!-- wrapping div -->
+<div lang="en" style="padding:32px 16px; background-color:#f7f7f7;" class="email-dark-background">
+<!-- wrapping div -->
+
 <div style="margin:auto; text-align:center; width:205px; height:165px;" class="email-picture">
 <picture>
 	<source srcset="https://www.hteumeuleu.fr/wp-content/uploads/2021/10/ddg-logo-dark.png" media="(prefers-color-scheme:dark)" />
 	<img src="https://www.hteumeuleu.fr/wp-content/uploads/2021/10/ddg-logo-light.png" width="205" height="165" alt="DuckDuckGo" style="vertical-align:middle; max-width:100%; height:auto; font:1em sans-serif; color:#000;" />
 </picture>
+</div>
+...
 </div>
 ```
 In the style block :
@@ -92,10 +130,11 @@ In the style block :
 	[data-ogsb] .email-picture img { visibility:hidden; }
 </style>
 ```
+to see the live codepen [hteumeuleu](https://codepen.io/hteumeuleu/pen/porJdjR)
 
 ## Darkmode : Outlook 365 dark mode (All code from Nicole Merlin)
 
-### MSO Gradient Solution
+### MSO Gradient Solution to keep colors on text
 
 Add a class to the code you want to fix. 
 In the code :
