@@ -62,6 +62,26 @@ Then in the html :
 
 For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
 
+## Image swap (discovered with the help of Hussein Al Hammad and Nicole Hickman on Email slack)
+>This works on 
+- :x: iPhone 12 iOS 14 (force dark) 
+
+In the html:
+```
+<img class="light-img" alt="" border="0" width="94" height="25" src="ligth-image.png" style="width:94px;height:25px">
+<img class="dark-img" alt="" border="0" width="94" height="25" src="dark-image.png" style="width:94px;height:25px;display:none">
+```
+In the style block:
+```
+.apple-mail-implicit-dark-support .dark-img{
+	display:block !important
+	
+}
+.apple-mail-implicit-dark-support .light-img{
+	display:none !important;
+} 
+```
+
 ## Image swap (hack from Mark Robbins)
 
 Exact same result as above with less code !
