@@ -62,7 +62,9 @@ Then in the html :
 
 For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
 
-## Image swap (discovered with the help of Hussein Al Hammad and Nicole Hickman on Email slack)
+## Image swap (discovered thanks to the testi@ log by Hussein Al Hammad on Email slack)
+
+iPhone 12 iOS 14 (dark) is since march 2021 (force dark) by adding to <html> class ".apple-mail-implicit-dark-support"
 
 >This works on 
 - :heavy_check_mark: iPhone 12 iOS 14 (force dark) 
