@@ -63,8 +63,9 @@ Then in the html :
 For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
 
 ## Image swap (discovered with the help of Hussein Al Hammad and Nicole Hickman on Email slack)
+
 >This works on 
-- :x: iPhone 12 iOS 14 (force dark) 
+- :heavy_check_mark: iPhone 12 iOS 14 (force dark) 
 
 In the html:
 ```
