@@ -161,7 +161,7 @@ In the style block:
 
 ## Image swap 
 	
-Including the last hack + the `<picture>` solutions above, we ca get a quite good support for darkmode :
+Including the last hack + the `<picture>` solutions above, we can get a quite good support for darkmode :
 
 >This works on 
 - :heavy_check_mark: Office 365 Dark (macOS)
