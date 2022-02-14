@@ -61,30 +61,7 @@ Then in the html :
 ```
 
 For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
-
-## Image swap (discovered thanks to the testi@ log by Hussein Al Hammad on Email slack)
-
-iPhone 12 iOS 14 (dark) is since march 2021 (force dark) by adding to <html> class ".apple-mail-implicit-dark-support"
-
->This works on 
-- :heavy_check_mark: iPhone 12 iOS 14 (force dark) 
-
-In the html:
-```
-<img class="light-img" alt="" border="0" width="94" height="25" src="ligth-image.png" style="width:94px;height:25px">
-<img class="dark-img" alt="" border="0" width="94" height="25" src="dark-image.png" style="width:94px;height:25px;display:none">
-```
-In the style block:
-```
-.apple-mail-implicit-dark-support .dark-img{
-	display:block !important
 	
-}
-.apple-mail-implicit-dark-support .light-img{
-	display:none !important;
-} 
-```
-
 ## Image swap (hack and code from Mark Robbins)
 
 Exact same result as above with less code !
@@ -126,10 +103,6 @@ Exact same result as above + Outlook - Chrome (dark) support
 - :x: iPhone 12 iOS 14 (force dark) 
 - :x: iPhone 12 - Gmail iOS 14 (dark)  
 
-
-Mac OS Monterrey, Big Sur, Mojave no changes in light mode
-
-
 In the html:
 ```
 <!-- wrapping div -->
@@ -159,6 +132,73 @@ In the style block :
 </style>
 ```
 to see the original code, please check [hteumeuleu's codepen](https://codepen.io/hteumeuleu/pen/porJdjR)
+Note : if you want to force light mode on Mac OS Monterrey, Big Sur, Mojave use only light mode (meta tag and ::root declaration) and remove the @media (prefers-coloscheme)
+
+## Image swap (discovered thanks to the testi@ log by Hussein Al Hammad on Email slack)
+
+Following Nicole Hickman remark on EmailSlack about iPhone 12 iOS 14 (dark), Hussein Al Hammad spoted testi@ log in which we can read : "iPhone 12 iOS 14 (dark) is since march 2021 (force dark) by adding to <html> class ".apple-mail-implicit-dark-support".
+	
+So to simply target iPhone 12 iOS 14 (dark) we could do
+
+>This works on 
+- :heavy_check_mark: iPhone 12 iOS 14 (force dark) 
+
+In the html:
+```
+<img class="light-img" alt="" border="0" width="94" height="25" src="ligth-image.png" style="width:94px;height:25px">
+<img class="dark-img" alt="" border="0" width="94" height="25" src="dark-image.png" style="width:94px;height:25px;display:none">
+```
+In the style block:
+```
+.apple-mail-implicit-dark-support .dark-img{
+	display:block !important
+	
+}
+.apple-mail-implicit-dark-support .light-img{
+	display:none !important;
+} 
+```
+And to include this hack with the picture solutions above, which work best, here is an example :
+>This works on 
+- :heavy_check_mark: Office 365 Dark (macOS)
+- :heavy_check_mark: Android 10 - Gmail Dark  
+- :heavy_check_mark: Outlook - Chrome (dark)
+- :heavy_check_mark: iPhone SE dark - Outlook 
+- :heavy_check_mark: iPhone 12 iOS 14 (force dark)
+
+>Don't works on
+- :x: Android 12 - Gmail Dark 
+- :x: Office 365 Dark - (win) 
+- :x: iPhone 12 - Gmail iOS 14 (dark) 
+	
+In the style block :
+```
+<style>
+   [data-ogsb] { 
+      color:#fff !important; 
+      background-color:#1c1c1c !important; 
+   }
+   [data-ogsb] .swap-image,
+    .apple-mail-implicit-dark-support .swap-image{
+      background: url('image-for-darkmode.png') no-repeat center;
+      background-size: contain;
+    }
+    [data-ogsb] .swap-image img,
+     .apple-mail-implicit-dark-support .swap-image img{
+      visibility: hidden;
+    }
+</style>
+```
+And inline : 
+```
+<div class="swap-image">
+    <picture>
+      <source srcset="image-for-darkmode.png" media="(prefers-color-scheme: dark)">
+      <img src="regular-image.png" alt="Alt Text!" width="94" height="25" border="0" style="width:94px;height:24px;color: #ffffff; font-family: Arial, sans-serif; text-align:left; font-size:28px; line-height:36px; text-decoration: none; margin: 0 auto; padding: 0;">
+    </picture>
+  </div>
+```
+
 
 ## Darkmode : Fixing problems in dark mode (hacks and code from Nicole Merlin)
 
@@ -312,7 +352,9 @@ And in the style block :
     </style>
 <![endif]-->
 ```
-	
+
+On top of that, Nicole Merlin reported to me Alex Robinson's discovery which he shared on twitter:(quote) "It turns out you can keep the vml fill transparent while satisfying the light/dark fill requirement. eg <v:rect fillcolor="#555555" opacity="0%">" .[See the message](https://twitter.com/AlexRob22358708/status/1490879213679050752)
+
 For more information on this read Nicole Merlin article : [Fixing Text Color Changes Inside VML](https://webdesign.tutsplus.com/tutorials/how-to-fix-outlook-dark-mode-problems--cms-37718)
 
 ### Buttons
