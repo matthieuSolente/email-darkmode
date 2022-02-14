@@ -108,7 +108,7 @@ Mac OS Monterrey, Big Sur, Mojave no changes in light mode
   <img src="light-img.png" alt="Alt Text!" style="">
 </picture>
 ```
-For more information on image swap, please check [Mark Robbins' page](https://www.goodemailcode.com/email-enhancements/picture)
+For more information on image swap, please check [Mark Robbins' page](https://www.goodemailcode.com/email-enhancements/picture) and original [webkit page] (https://webkit.org/blog/8840/dark-mode-support-in-webkit/)
 
 ## Image swap (hack and code from Remi Parmentier)
 
@@ -498,7 +498,9 @@ For more information on blend mode please check [Remi Parmentier' page](https://
 .foo {filter: brightness(0) invert(1);} 
 }
 ```
-For more information, please check [Jay Oram](https://www.emailtalk.fm/episodes/08-dark-mode-w-jay-oram)
+For more information, please check [Jay Oram](https://www.emailtalk.fm/episodes/08-dark-mode-w-jay-oram).
+
+This is also mentionned in [Webkit page]([webkit page] (https://webkit.org/blog/8840/dark-mode-support-in-webkit/))
 
 ## Add a drop shadow
 
