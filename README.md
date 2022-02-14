@@ -134,14 +134,14 @@ In the style block :
 to see the original code, please check [hteumeuleu's codepen](https://codepen.io/hteumeuleu/pen/porJdjR)
 Note : if you want to force light mode on Mac OS Monterrey, Big Sur, Mojave use only light mode (meta tag and ::root declaration) and remove the @media (prefers-coloscheme)
 
-## Image swap (discovered thanks to the testi@ log by Hussein Al Hammad on Email slack)
-
-Following Nicole Hickman remark on EmailSlack about iPhone 12 iOS 14 (dark), Hussein Al Hammad spoted testi@ log in which we can read : "iPhone 12 iOS 14 (dark) is since march 2021 (force dark) by adding to <html> class ".apple-mail-implicit-dark-support".
-	
-So to simply target iPhone 12 iOS 14 (dark) we could do
+## Image swap (from testi@log)
 
 >This works on 
-- :heavy_check_mark: iPhone 12 iOS 14 (force dark) 
+- :heavy_check_mark: iPhone 12 iOS 14 (force dark)
+- 
+Following Nicole Hickman remark on EmailSlack about iPhone 12 iOS 14 (dark), Hussein Al Hammad spoted testi@ log in which we can read : "iPhone 12 iOS 14 (dark) is since march 2021 (force dark) by adding to <html> class ".apple-mail-implicit-dark-support".
+	
+So to simply target iPhone 12 iOS 14 (dark) we could do 
 
 In the html:
 ```
@@ -158,14 +158,18 @@ In the style block:
 	display:none !important;
 } 
 ```
-And to include this hack with the picture solutions above, which work best, here is an example :
+
+## Image swap 
+	
+Including the last hack with the `<picture>` solutions above, we ca get a quite good support for darkmode :
+
 >This works on 
 - :heavy_check_mark: Office 365 Dark (macOS)
 - :heavy_check_mark: Android 10 - Gmail Dark  
 - :heavy_check_mark: Outlook - Chrome (dark)
 - :heavy_check_mark: iPhone SE dark - Outlook 
 - :heavy_check_mark: iPhone 12 iOS 14 (force dark)
-
+	
 >Don't works on
 - :x: Android 12 - Gmail Dark 
 - :x: Office 365 Dark - (win) 
