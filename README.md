@@ -293,7 +293,7 @@ background-color:#462B00 !important;
    </style>
 <![endif]-->
 ```
-To find the fallback color : In you test tool (testi@ or whatever) and using a chrome extension like colorzilla, take the color that interests you on the preview of your template in darkmode.
+To find the fallback color : In your test tool (testi@ or whatever) and using a chrome extension like colorzilla, take the color that interests you on the preview of your template in darkmode.
 
 ### Different Solutions to Keep text colors on VML
 
