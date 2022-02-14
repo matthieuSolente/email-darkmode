@@ -202,7 +202,21 @@ And inline :
     </picture>
   </div>
 ```
+## Keep text color 
+	
+>This works on 
+- :heavy_check_mark: iPhone 12 iOS 14 (force dark)
+	
+With the class described above, we can also target iPhone 12 iOs 14 (force dark) and force text color to remain the same on darkmode.
+Example with white color : 
 
+```
+.apple-mail-implicit-dark-support .mytitle,
+.apple-mail-implicit-dark-support .subtitle{
+	color:#ffffff !important;
+	-webkit-text-fill-color: #ffffff !important; /*without this is doesn't work */
+}
+```
 
 ## Darkmode : Fixing problems in dark mode (hacks and code from Nicole Merlin)
 
