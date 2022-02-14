@@ -138,7 +138,7 @@ Note : if you want to force light mode on Mac OS Monterrey, Big Sur, Mojave use 
 
 >This works on 
 - :heavy_check_mark: iPhone 12 iOS 14 (force dark)
-- 
+
 Following Nicole Hickman remark on EmailSlack about iPhone 12 iOS 14 (dark), Hussein Al Hammad spoted testi@ log in which we can read : "iPhone 12 iOS 14 (dark) is since march 2021 (force dark) by adding to <html> class ".apple-mail-implicit-dark-support".
 	
 So to simply target iPhone 12 iOS 14 (dark) we could do 
@@ -161,7 +161,7 @@ In the style block:
 
 ## Image swap 
 	
-Including the last hack with the `<picture>` solutions above, we ca get a quite good support for darkmode :
+Including the last hack + the `<picture>` solutions above, we ca get a quite good support for darkmode :
 
 >This works on 
 - :heavy_check_mark: Office 365 Dark (macOS)
