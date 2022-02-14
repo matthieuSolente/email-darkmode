@@ -108,7 +108,7 @@ Mac OS Monterrey, Big Sur, Mojave no changes in light mode
   <img src="light-img.png" alt="Alt Text!" style="">
 </picture>
 ```
-For more information on image swap, please check [Mark Robbins' page](https://www.goodemailcode.com/email-enhancements/picture) and original [webkit page] (https://webkit.org/blog/8840/dark-mode-support-in-webkit/)
+For more information on image swap, please check [Mark Robbins' page](https://www.goodemailcode.com/email-enhancements/picture) and original [webkit page](https://webkit.org/blog/8840/dark-mode-support-in-webkit/)
 
 ## Image swap (hack and code from Remi Parmentier)
 
