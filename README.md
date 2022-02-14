@@ -288,7 +288,7 @@ Again, according to the same principle, take only the part indicating the type o
 mso-style-textfill-type:gradient;
 mso-style-textfill-fill-gradientfill-shadetype:path-rect;
 mso-style-textfill-fill-gradientfill-stoplist:"0 \#FFD200 -1 100000\,99000 \#ABC0E4 4 100000 lumm=45000 lumo=55000\,100000 \#000000 1 100000\,88000 \#FFD200 -1 100000\,99500 \#D5C972 -1 100000\,100000 \#FFD200 -1 100000";
-background-color:#462B00 !important;
+background-color:#ffe5bc !important;
 }
    </style>
 <![endif]-->
