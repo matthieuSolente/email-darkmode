@@ -500,8 +500,6 @@ For more information on blend mode please check [Remi Parmentier' page](https://
 ```
 For more information, please check [Jay Oram](https://www.emailtalk.fm/episodes/08-dark-mode-w-jay-oram).
 
-This is also mentionned in [Webkit page]([webkit page] (https://webkit.org/blog/8840/dark-mode-support-in-webkit/))
-
 ## Add a drop shadow
 
 A common hack to add a white shadow around an image in dark mode
