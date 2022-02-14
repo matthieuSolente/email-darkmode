@@ -132,7 +132,7 @@ In the style block :
 </style>
 ```
 to see the original code, please check [hteumeuleu's codepen](https://codepen.io/hteumeuleu/pen/porJdjR)
-Note : if you want to force light mode on Mac OS Monterrey, Big Sur, Mojave use only light mode (meta tag and ::root declaration) and remove the @media (prefers-coloscheme)
+Note : if you want to force light mode on Mac OS Monterrey, Big Sur, Mojave use only light mode (meta tag and ::root declaration) and remove the @media (prefers-color scheme)
 
 ## Image swap (from testi@log)
 
