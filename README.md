@@ -1,7 +1,7 @@
 # EMAIL-DARKMODE
 These different techniques for dark mode were initiated by Nicole Merlin, Remi Parmentier, Mark Robbins, Jay Oram and some other email geeks, and here is a summary of all these techniques known and still functional in 2022. I will do my best to keep this page up to date, please feel free to report errors or outdated items over time..
 
-**NO SUPPORT: Gmail app and Windows 10 mail. ** 
+**NO SUPPORT: Gmail app and Windows 10 mail.** 
 
 for other darkmode clients, here are some hacks
 
