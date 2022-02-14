@@ -262,6 +262,38 @@ In the style block:
 <![endif]-->
 ```
 For more information on this, read Nicole Merlin article : [How To Fix Outlook Dark Mode Problems (Email Design)](https://webdesign.tutsplus.com/tutorials/how-to-fix-outlook-dark-mode-problems--cms-37718)
+	
+### MSO Gradient Solution to keep background colors in html
+
+>This works on 
+- :heavy_check_mark: Office 365 Dark (Win)
+	
+Following Nicole's tutorial, I noticed that this technique also works for the background color. In word, select a text box in the "insert" tab. Insert your text box, and then click the "Format Shape" menu tab. In the "Fill" option, expand the "gradient" submenu and then "more gradient". A window opens in which you can, again, select a gradient color with two stops. Select the same color twice and then save your word file in html format. In the code you will find a whole vml block for your text box. You must go back to the file until you find the color of your gradient (do a check f otherwise to find it more easily.) You will find several paragraphs with your mso gradient:
+	
+```
+<span
+style='mso-style-textfill-type:gradient;mso-style-textfill-fill-gradientfill-shadetype:
+path-rect;mso-style-textfill-fill-gradientfill-shade-rectfill-pctleft:100.0%;
+mso-style-textfill-fill-gradientfill-shade-rectfill-pcttop:100.0%;mso-style-textfill-fill-gradientfill-shade-rectfill-pctright:
+0%;mso-style-textfill-fill-gradientfill-shade-rectfill-pctbottom:0%;mso-style-textfill-fill-gradientfill-stoplist:
+"0 \#FFD200 -1 100000\,99000 \#ABC0E4 4 100000 lumm=45000 lumo=55000\,100000 \#000000 1 100000\,88000 \#FFD200 -1 100000\,99500 \#D5C972 -1 100000\,100000 \#FFD200 -1 100000"'><o:p></o:p></span>	
+	
+```
+Again, according to the same principle, take only the part indicating the type of shape, and add your fallback color (don't forget the  "!important" declaration) 
+	
+```
+<!--[if gte mso 16]>
+    <style>
+        .keep-background {
+mso-style-textfill-type:gradient;
+mso-style-textfill-fill-gradientfill-shadetype:path-rect;
+mso-style-textfill-fill-gradientfill-stoplist:"0 \#FFD200 -1 100000\,99000 \#ABC0E4 4 100000 lumm=45000 lumo=55000\,100000 \#000000 1 100000\,88000 \#FFD200 -1 100000\,99500 \#D5C972 -1 100000\,100000 \#FFD200 -1 100000";
+background-color:#462B00 !important;
+}
+   </style>
+<![endif]-->
+```
+To find the fallback color : In you test tool (testi@ or whatever) and using a chrome extension like colorzilla, take the color that interests you on the preview of your template in darkmode.
 
 ### Different Solutions to Keep text colors on VML
 
