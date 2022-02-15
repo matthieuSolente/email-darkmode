@@ -7,19 +7,20 @@ for other darkmode clients, here are some hacks
 
 
 ## Image Swap (Code from Litmus team)
+According to Litmus, the embedded `<style></style>` section is supposed to work on iOS, Apple Mail, Outlook.com, Outlook 2019 (MacOS), and Outlook App (iOS)
+The `[ogsc]` is supposed to add support in Outlook app (Android)
 
->This works on 
+>This works on (testi@)
 - :heavy_check_mark: Office 365 Dark (macOS)
 - :heavy_check_mark: Android 10 - Gmail Dark  
 - :heavy_check_mark: iPhone SE dark - Outlook 
-- :heavy_check_mark: Outlook - Chrome (dark)
 
->Don't works on
+>Don't works on (testi@)
 - :x: Android 12 - Gmail Dark 
 - :x: Office 365 Dark - (win)
 - :x: iPhone 12 iOS 14 (force dark) 
 - :x: iPhone 12 - Gmail iOS 14 (dark)
-
+- :x: Outlook - Chrome (dark)
 In the head
 ```
 <meta name="color-scheme" content="light dark">
