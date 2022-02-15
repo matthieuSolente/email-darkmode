@@ -96,7 +96,7 @@ For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https:
 
 **Note**:
 
-It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave so you will have the white image. The background won't change so here Remi adds a wrapping div with the "email-dark-background" class to change the background color. 
+It's working on Mac OS Monterrey, Big Sur, Mojave so you will have the white image. The background won't change so here Remi adds a wrapping div with the "email-dark-background" class to change the background color. 
 If you choose light mode (see below), there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
 
 ```
@@ -158,7 +158,7 @@ In the style block :
 **Note**:
 
 It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave so you will have the white image. The background won't change so here Remi adds a wrapping div with the "email-dark-background" class to change the background color. 
-If you choose light mode (see below), there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
+If you choose light mode (see below), there won't be any changes on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
 
 ```
 <meta name="color-scheme" content="light">
@@ -215,10 +215,6 @@ Including the last hack + the `<picture>` solutions above, we can get a quite go
 In the style block :
 ```
 <style>
-   [data-ogsb] { 
-      color:#fff !important; 
-      background-color:#1c1c1c !important; 
-   }
    [data-ogsb] .swap-image,
     .apple-mail-implicit-dark-support .swap-image{
       background: url('image-for-darkmode.png') no-repeat center;
