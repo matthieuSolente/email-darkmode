@@ -9,7 +9,7 @@
 <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
-<title></title>
+<title>Litmus image swap</title>
 <!--[if mso]>
   <noscript>
     <xml>
@@ -117,6 +117,10 @@ u + .body a {
 }
 </style>
 <style>
+  body {/*Remove this or add color eg. #f2f2f2 inline and it won't work on Outlook Dark Chrome*/
+  background-color: #eee;
+  color: #111;
+}
   @media (prefers-color-scheme: dark ) {
 .dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
    
