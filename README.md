@@ -8,7 +8,11 @@ for other darkmode clients, here are some hacks
 
 ## Image Swap (Code from Litmus team)
 According to Litmus, the embedded `<style></style>` section is supposed to work on iOS, Apple Mail, Outlook.com, Outlook 2019 (MacOS), and Outlook App (iOS)
-The `[ogsc]` is supposed to add support in Outlook app (Android)
+The `[ogsc]` is supposed to add support in Outlook app (Android).
+
+This code was tested on Litmus with inline background-color on body (#fefefe).
+
+**Removing the inline background-color and adding it in the head will add support to Outlook - Chrome (dark)**
 
 >This works on (testi@)
 - :heavy_check_mark: Office 365 Dark (macOS)
@@ -20,7 +24,7 @@ The `[ogsc]` is supposed to add support in Outlook app (Android)
 - :x: Office 365 Dark - (win)
 - :x: iPhone 12 iOS 14 (force dark) 
 - :x: iPhone 12 - Gmail iOS 14 (dark)
-- :x:Outlook - Chrome (dark)
+- :x: Outlook - Chrome (dark)
 
 In the head
 ```
@@ -61,6 +65,7 @@ Then in the html :
 **Note**:
 
 It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave you will have the white image. The background won't change on these versions so to avoid white image on light background you'll have to change the background color of the container.
+
 If you choose light mode, there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
 
 ```
@@ -76,6 +81,8 @@ If you choose light mode, there won't be any changes on Mac OS so on Mac OS Mont
 For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
 	
 ## Image swap (hack and code from Mark Robbins)
+
+This code was tested on Litmus with inline background-color on body (#fefefe).
 
 >This works on 
 - :heavy_check_mark: Office 365 Dark (macOS)
@@ -99,6 +106,7 @@ For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https:
 **Note**:
 
 It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave you will have the white image. The background won't change on these versions so to avoid white image on light background you'll have to change the background color of the container.
+
 If you choose light mode, there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
 
 ```
@@ -114,7 +122,7 @@ For more information on image swap, please check [Mark Robbins' page](https://ww
 
 ## Image swap (hack and code from Remi Parmentier)
 
-Exact same result as above 
+This code was tested on Litmus with or without inline background-color on body (#fefefe). Adding background-color on a body class in the head will have won't give more support.
 
 >This works on 
 - :heavy_check_mark: Office 365 Dark (macOS)
@@ -160,6 +168,7 @@ In the style block :
 **Note**:
 
 It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave so you will have the white image. The background won't change so here Remi adds a wrapping div with the "email-dark-background" class to change the background color. 
+
 If you choose light mode (see below), there won't be any changes on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
 
 ```
