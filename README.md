@@ -168,10 +168,9 @@ If you choose light mode (see below), there won't be any changes on Mac OS so on
 	color-scheme: light;
 	supported-color-schemes: light;
 }
-
+```
 To see the original code, please check [hteumeuleu's codepen](https://codepen.io/hteumeuleu/pen/porJdjR)
 
-```
 ## Image swap (from testi@log)
 
 >This works on 
