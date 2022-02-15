@@ -122,7 +122,7 @@ For more information on image swap, please check [Mark Robbins' page](https://ww
 
 ## Image swap (hack and code from Remi Parmentier)
 
-This code was tested on Litmus with or without inline background-color on body (#fefefe). Adding background-color on a body class in the head will have won't give more support.
+This code was tested on Litmus with or without inline background-color on body (#fefefe). 
 
 >This works on 
 - :heavy_check_mark: Office 365 Dark (macOS)
