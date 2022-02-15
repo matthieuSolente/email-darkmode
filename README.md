@@ -97,8 +97,8 @@ For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https:
 
 **Note**:
 
-It's working on Mac OS Monterrey, Big Sur, Mojave so you will have the white image. The background won't change so here Remi adds a wrapping div with the "email-dark-background" class to change the background color. 
-If you choose light mode (see below), there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
+It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave you will have the white image. The background won't change on these versions so to avoid white image on light background you'll have to change the background color of the container.
+If you choose light mode, there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
 
 ```
 <meta name="color-scheme" content="light">
@@ -119,13 +119,13 @@ Exact same result as above
 - :heavy_check_mark: Office 365 Dark (macOS)
 - :heavy_check_mark: Android 10 - Gmail Dark  
 - :heavy_check_mark: Outlook - Chrome (dark)
+- :heavy_check_mark: iPhone SE dark - Outlook 
 
 >Don't works on
 - :x: Android 12 - Gmail Dark 
 - :x: Office 365 Dark - (win)
 - :x: iPhone 12 iOS 14 (force dark) 
-- :x: iPhone 12 - Gmail iOS 14 (dark)  
--  :x: iPhone SE dark - Outlook 
+- :x: iPhone 12 - Gmail iOS 14 (dark)   
 
 In the html:
 ```
