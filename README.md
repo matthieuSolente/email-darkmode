@@ -20,6 +20,7 @@ for other darkmode clients, here are some hacks
 - :x: iPhone 12 iOS 14 (force dark) 
 - :x: iPhone 12 - Gmail iOS 14 (dark)
 
+It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave you will have the white image. The background won't change on these versions so to avoid white image on light background you'll have to change the background color of the container.
 
 
 Mac OS Monterrey, Big Sur, Mojave no changes in light mode
@@ -77,7 +78,7 @@ For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https:
 - :x: Outlook - Chrome (dark)
 - :x: iPhone SE dark - Outlook 
 
-Mac OS Monterrey, Big Sur, Mojave no changes in light mode
+It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave you will have the white image. The background won't change on these versions so to avoid white image on light background you'll have to change the background color of the container.
 
 ```
 <picture>
@@ -89,19 +90,21 @@ For more information on image swap, please check [Mark Robbins' page](https://ww
 
 ## Image swap (hack and code from Remi Parmentier)
 
-Exact same result as above + Outlook - Chrome (dark) support
+Exact same result as above 
 
 >This works on 
 - :heavy_check_mark: Office 365 Dark (macOS)
 - :heavy_check_mark: Android 10 - Gmail Dark  
 - :heavy_check_mark: Outlook - Chrome (dark)
-- :heavy_check_mark: iPhone SE dark - Outlook 
 
 >Don't works on
 - :x: Android 12 - Gmail Dark 
 - :x: Office 365 Dark - (win)
 - :x: iPhone 12 iOS 14 (force dark) 
 - :x: iPhone 12 - Gmail iOS 14 (dark)  
+-  :x: iPhone SE dark - Outlook 
+-  
+It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave so you will have the white image. The background won't change so here Remi adds a wrapping div with the "email-dark-background" class to change the background color.
 
 In the html:
 ```
