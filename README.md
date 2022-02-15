@@ -12,13 +12,14 @@ for other darkmode clients, here are some hacks
 - :heavy_check_mark: Office 365 Dark (macOS)
 - :heavy_check_mark: Android 10 - Gmail Dark  
 - :heavy_check_mark: iPhone SE dark - Outlook 
+- :heavy_check_mark: Outlook - Chrome (dark)
 
 >Don't works on
 - :x: Android 12 - Gmail Dark 
 - :x: Office 365 Dark - (win)
 - :x: iPhone 12 iOS 14 (force dark) 
 - :x: iPhone 12 - Gmail iOS 14 (dark)
-- :x: Outlook - Chrome (dark)
+
 
 
 Mac OS Monterrey, Big Sur, Mojave no changes in light mode
@@ -64,11 +65,9 @@ For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https:
 	
 ## Image swap (hack and code from Mark Robbins)
 
-Exact same result as above with less code !
 >This works on 
 - :heavy_check_mark: Office 365 Dark (macOS)
 - :heavy_check_mark: Android 10 - Gmail Dark  
-- :heavy_check_mark: iPhone SE dark - Outlook 
 
 >Don't works on
 - :x: Android 12 - Gmail Dark 
@@ -76,6 +75,7 @@ Exact same result as above with less code !
 - :x: iPhone 12 iOS 14 (force dark) 
 - :x: iPhone 12 - Gmail iOS 14 (dark)
 - :x: Outlook - Chrome (dark)
+- :x: iPhone SE dark - Outlook 
 
 Mac OS Monterrey, Big Sur, Mojave no changes in light mode
 
