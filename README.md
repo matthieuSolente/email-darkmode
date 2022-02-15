@@ -20,11 +20,6 @@ for other darkmode clients, here are some hacks
 - :x: iPhone 12 iOS 14 (force dark) 
 - :x: iPhone 12 - Gmail iOS 14 (dark)
 
-It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave you will have the white image. The background won't change on these versions so to avoid white image on light background you'll have to change the background color of the container.
-
-
-Mac OS Monterrey, Big Sur, Mojave no changes in light mode
-
 In the head
 ```
 <meta name="color-scheme" content="light dark">
@@ -61,6 +56,20 @@ Then in the html :
 <img src="https://campaigns.litmus.com/_email/_global/images/logo_icon-name-white.png" width="163" height="60" alt="Litmus" style="color: #ffffff; font-family:'proxima_nova', Helvetica, Arial, sans-serif; text-align:center; font-weight:bold; font-size:36px; line-height:40px; text-decoration: none; margin: 0 auto; padding: 0;" border="0" />
 </div><!--<![endif]-->
 ```
+**Note**:
+
+It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave you will have the white image. The background won't change on these versions so to avoid white image on light background you'll have to change the background color of the container.
+If you choose light mode, there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
+
+```
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<style>
+:root {
+	color-scheme: light;
+	supported-color-schemes: light;
+}
+```
 
 For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
 	
@@ -78,13 +87,26 @@ For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https:
 - :x: Outlook - Chrome (dark)
 - :x: iPhone SE dark - Outlook 
 
-It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave you will have the white image. The background won't change on these versions so to avoid white image on light background you'll have to change the background color of the container.
-
 ```
 <picture>
   <source srcset="dark-img.png" media="(prefers-color-scheme: dark)">
   <img src="light-img.png" alt="Alt Text!" style="">
 </picture>
+```
+
+**Note**:
+
+It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave so you will have the white image. The background won't change so here Remi adds a wrapping div with the "email-dark-background" class to change the background color. 
+If you choose light mode (see below), there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
+
+```
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<style>
+:root {
+	color-scheme: light;
+	supported-color-schemes: light;
+}
 ```
 For more information on image swap, please check [Mark Robbins' page](https://www.goodemailcode.com/email-enhancements/picture) and original [webkit page](https://webkit.org/blog/8840/dark-mode-support-in-webkit/)
 
@@ -103,8 +125,6 @@ Exact same result as above
 - :x: iPhone 12 iOS 14 (force dark) 
 - :x: iPhone 12 - Gmail iOS 14 (dark)  
 -  :x: iPhone SE dark - Outlook 
--  
-It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave so you will have the white image. The background won't change so here Remi adds a wrapping div with the "email-dark-background" class to change the background color.
 
 In the html:
 ```
@@ -134,9 +154,24 @@ In the style block :
 	[data-ogsb] .email-picture img { visibility:hidden; }
 </style>
 ```
-to see the original code, please check [hteumeuleu's codepen](https://codepen.io/hteumeuleu/pen/porJdjR)
-Note : if you want to force light mode on Mac OS Monterrey, Big Sur, Mojave use only light mode (meta tag and ::root declaration) and remove the @media (prefers-color scheme)
 
+**Note**:
+
+It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave so you will have the white image. The background won't change so here Remi adds a wrapping div with the "email-dark-background" class to change the background color. 
+If you choose light mode (see below), there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
+
+```
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<style>
+:root {
+	color-scheme: light;
+	supported-color-schemes: light;
+}
+
+To see the original code, please check [hteumeuleu's codepen](https://codepen.io/hteumeuleu/pen/porJdjR)
+
+```
 ## Image swap (from testi@log)
 
 >This works on 
