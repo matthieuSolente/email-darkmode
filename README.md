@@ -611,7 +611,7 @@ More information on this in Nicole article [Fixing Problems With Borders in Dark
 For more information on blend mode please check [Remi Parmentier' page](https://www.hteumeuleu.com/2021/fixing-gmail-dark-mode-css-blend-modes/)
 	
 
-## Image color inersion (hack and code from Jay Oram)
+## Image color inversion (hack and code from Jay Oram)
 	
 >This works on 
 - :heavy_check_mark:Office 365 Dark (macOS)
