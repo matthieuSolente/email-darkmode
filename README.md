@@ -7,31 +7,67 @@ for other darkmode clients, here are some hacks
 
 
 ## Image Swap (Code from Litmus team)
-According to Litmus, the embedded `<style></style>` section is supposed to work on iOS, Apple Mail, Outlook.com, Outlook 2019 (MacOS), and Outlook App (iOS)
-The `[ogsc]` is supposed to add support in Outlook app (Android).
 
-This code was tested on Litmus with inline background-color on body (#fefefe).
+This code was tested on testi@ with inline background-color on body (#fefefe).
+	
+Add the following meta tags in order to Enable Dark Mode in email client user agents
 
-**Removing the inline background-color and adding it in the head will add support to Outlook - Chrome (dark)**
-
->This works on (testi@)
-- :heavy_check_mark: Office 365 Dark (macOS)
-- :heavy_check_mark: Android 10 - Gmail Dark  
-- :heavy_check_mark: iPhone SE dark - Outlook 
-
->Don't works on (testi@)
-- :x: Android 12 - Gmail Dark 
-- :x: Office 365 Dark - (win)
-- :x: iPhone 12 iOS 14 (force dark) 
-- :x: iPhone 12 - Gmail iOS 14 (dark)
-- :x: Outlook - Chrome (dark)
-
-In the head
 ```
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
 ```
-In the style block
+
+Then add Dark Mode styles for @media (prefers-color-scheme: dark)
+
+<details><summary>Check the support for this</summary>
+<p>
+**Mobile Clients**
+	
+| Email Clients  | Works | Don't works |
+| :---         |     :---:      |     :---:      |
+| iPhone Mail  |   | :x:  |
+| iPad Mail  |   | :x:  |
+| Gmail App (Android)  |  | :x: |
+| Gmail App (iOS)  |   | :x:  |
+| Outlook App (Android)  |   | :x:  |
+| Outlook App (iOS)  | :heavy_check_mark:  |   |
+
+**Desktop Clients**
+
+| Email Clients  | Works | Don't works |
+| :---         |     :---:      |     :---:      |
+| Apple Mail | :heavy_check_mark:  |  |
+| Outlook 2019 (Mac OS) | :heavy_check_mark:  |  |
+| Outlook 2019 (Windows)|   | :x:  |
+
+**Web Clients**
+	
+| Email Clients  | Works | Don't works |
+| :---         |     :---:      |     :---:      |
+| Outlook.com | :heavy_check_mark:  |   |
+| Hey.com |   | :x: |
+
+</p>
+</details>
+
+<details><summary>Check the support on Testi@</summary>
+<p>
+
+>This works on (testi@)
+
+- ✔️ Office 365 Dark (macOS)
+- ✔️ Android 10 - Gmail Dark
+- ✔️ iPhone SE dark - Outlook
+- ✔️ Outlook - Chrome (dark)
+
+>Don't works on (testi@)
+
+- ❌ Android 12 - Gmail Dark
+- ❌ Office 365 Dark - (win)
+- ❌ iPhone 12 iOS 14 (force dark)
+- ❌ iPhone 12 - Gmail iOS 14 (dark) 
+</p>
+</details>
 
 ```
 @media (prefers-color-scheme: dark ) {
@@ -43,16 +79,17 @@ In the style block
 }
 ```
 
-For Outlook App
+Then to add support to Outlook App (Android), duplicate Dark Mode styles with `[data-ogsc]` prefix
+
 ```
 /* Shows Dark Mode-Only Content, Like Images */
-[data-ogsc] .dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
- 
+[data-ogsc] .dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; } 
+
 /* Hides Light Mode-Only Content, Like Images */
 [data-ogsc] .light-img { display:none; display:none !important; }
 ```
 
-Then in the html :
+Then in the html place your two images :
 
 ```
 <img class="light-img" src="https://campaigns.litmus.com/_email/_global/images/logo_icon-name-black.png" width="163" height="60" alt="Litmus" style="color: #33373E; font-family:'proxima_nova', Helvetica, Arial, sans-serif; text-align:center; font-weight:bold; font-size:36px; line-height:40px; text-decoration: none; margin: 0 auto; padding: 0;" border="0" />
@@ -62,11 +99,9 @@ Then in the html :
 <img src="https://campaigns.litmus.com/_email/_global/images/logo_icon-name-white.png" width="163" height="60" alt="Litmus" style="color: #ffffff; font-family:'proxima_nova', Helvetica, Arial, sans-serif; text-align:center; font-weight:bold; font-size:36px; line-height:40px; text-decoration: none; margin: 0 auto; padding: 0;" border="0" />
 </div><!--<![endif]-->
 ```
+
 **Note**:
-
-It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave you will have the white image. The background won't change on these versions so to avoid white image on light background you'll have to change the background color of the container.
-
-If you choose light mode, there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
+If you choose light mode in the meta tags, there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
 
 ```
 <meta name="color-scheme" content="light">
@@ -82,19 +117,57 @@ For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https:
 	
 ## Image swap (hack and code from Mark Robbins)
 
-This code was tested on Litmus with inline background-color on body (#fefefe).
+This code was tested on Testi@ with inline background-color on body (#fefefe).
 
->This works on 
-- :heavy_check_mark: Office 365 Dark (macOS)
-- :heavy_check_mark: Android 10 - Gmail Dark  
+<details><summary>Check the support for this</summary>
+<p>
+**Mobile Clients**
+	
+| Email Clients  | Works | Don't works |
+| :---         |     :---:      |     :---:      |
+| iPhone Mail  |   | :x:  |
+| iPad Mail  |   | :x:  |
+| Gmail App (Android)  |  | :x: |
+| Gmail App (iOS)  |   | :x:  |
+| Outlook App (Android)  | | :x: |
+| Outlook App (iOS)  |  | :x:  |
+
+**Desktop Clients**
+
+| Email Clients  | Works | Don't works |
+| :---         |     :---:      |     :---:      |
+| Apple Mail | :heavy_check_mark:  | |
+| Outlook (Mac OS) | :heavy_check_mark:  | |
+| Outlook (Windows)|   | :x:  |
+
+**Web Clients**
+	
+| Email Clients  | Works | Don't works |
+| :---         |     :---:      |     :---:      |
+| Outlook.com |  | :x:  |
+| Hey.com |   | :x: |
+
+</p>
+</details>
+
+<details><summary>Check the support on Testi@</summary>
+<p>
+
+>This works on
+
+- ✔️ Office 365 Dark (macOS)
+- ✔️ Android 10 - Gmail Dark
 
 >Don't works on
-- :x: Android 12 - Gmail Dark 
-- :x: Office 365 Dark - (win)
-- :x: iPhone 12 iOS 14 (force dark) 
-- :x: iPhone 12 - Gmail iOS 14 (dark)
-- :x: Outlook - Chrome (dark)
-- :x: iPhone SE dark - Outlook 
+
+- ❌ Android 12 - Gmail Dark
+- ❌ Office 365 Dark - (win)
+- ❌ iPhone 12 iOS 14 (force dark)
+- ❌ iPhone 12 - Gmail iOS 14 (dark)
+- ❌ Outlook - Chrome (dark)
+- ❌ iPhone SE dark - Outlook
+</p>
+</details>
 
 ```
 <picture>
@@ -104,8 +177,6 @@ This code was tested on Litmus with inline background-color on body (#fefefe).
 ```
 
 **Note**:
-
-It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave you will have the white image. The background won't change on these versions so to avoid white image on light background you'll have to change the background color of the container.
 
 If you choose light mode, there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
 
@@ -124,6 +195,42 @@ For more information on image swap, please check [Mark Robbins' page](https://ww
 
 This code was tested on Litmus with or without inline background-color on body (#fefefe). 
 
+<details><summary>Check the support for this</summary>
+<p>
+**Mobile Clients**
+	
+| Email Clients  | Works | Don't works |
+| :---         |     :---:      |     :---:      |
+| iPhone Mail  |   | :x:  |
+| iPad Mail  |   | :x:  |
+| Gmail App (Android)  |  | :x: |
+| Gmail App (iOS)  |   | :x:  |
+| Outlook App (Android)  | :heavy_check_mark: *  | :x: * |
+| Outlook App (iOS)  | :heavy_check_mark: |  |
+
+**Desktop Clients**
+
+| Email Clients  | Works | Don't works |
+| :---         |     :---:      |     :---:      |
+| Apple Mail | :heavy_check_mark:  | |
+| Outlook (Mac OS) | :heavy_check_mark:  | |
+| Outlook (Windows)|   | :x:  |
+
+**Web Clients**
+	
+| Email Clients  | Works | Don't works |
+| :---         |     :---:      |     :---:      |
+| Outlook.com | :heavy_check_mark: |   |
+| Hey.com |   | :x: |
+
+*depends on versions
+</p>
+</details>
+
+
+<details><summary>Check the support on Testi@</summary>
+<p>
+
 >This works on 
 - :heavy_check_mark: Office 365 Dark (macOS)
 - :heavy_check_mark: Android 10 - Gmail Dark  
@@ -136,7 +243,11 @@ This code was tested on Litmus with or without inline background-color on body (
 - :x: iPhone 12 iOS 14 (force dark) 
 - :x: iPhone 12 - Gmail iOS 14 (dark)   
 
+</p>
+</details>
+
 In the html:
+
 ```
 <!-- wrapping div -->
 <div lang="en" style="padding:32px 16px; background-color:#f7f7f7;" class="email-dark-background">
@@ -150,8 +261,10 @@ In the html:
 </div>
 ...
 </div>
+
 ```
 In the style block :
+
 ```
 @media (prefers-color-scheme:dark) {
 	.email-dark-background:not([class^="x_"]) { color:#fff !important; background-color:#1c1c1c !important; }
@@ -167,8 +280,6 @@ In the style block :
 
 **Note**:
 
-It's working on Mac OS so on Mac OS Monterrey, Big Sur, Mojave so you will have the white image. The background won't change so here Remi adds a wrapping div with the "email-dark-background" class to change the background color. 
-
 If you choose light mode (see below), there won't be any changes on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
 
 ```
@@ -182,14 +293,14 @@ If you choose light mode (see below), there won't be any changes on Mac OS Monte
 ```
 To see the original code, please check [hteumeuleu's codepen](https://codepen.io/hteumeuleu/pen/porJdjR)
 
-## Image swap (from testi@log)
+## Specific Image swap for iPhone 12 iOS 14 (force dark)
 
 >This works on 
 - :heavy_check_mark: iPhone 12 iOS 14 (force dark)
 
 Following Nicole Hickman remark on EmailSlack about iPhone 12 iOS 14 (dark), Hussein Al Hammad spoted testi@ log in which we can read : "iPhone 12 iOS 14 (dark) is since march 2021 (force dark) by adding to <html> class ".apple-mail-implicit-dark-support".
 	
-So to simply target iPhone 12 iOS 14 (dark) we could do 
+So to simply target iPhone 12 iOS 14 (dark) we could do something like :
 
 In the html:
 ```
@@ -207,9 +318,12 @@ In the style block:
 } 
 ```
 
-## Image swap 
+## Specific Image swap for iPhone 12 iOS 14 (force dark) with picture tag
 	
 Including the last hack + the `<picture>` solutions above, we can get a quite good support for darkmode :
+
+<details><summary>Check the support on Testi@</summary>
+<p>
 
 >This works on 
 - :heavy_check_mark: Office 365 Dark (macOS)
@@ -222,7 +336,9 @@ Including the last hack + the `<picture>` solutions above, we can get a quite go
 - :x: Android 12 - Gmail Dark 
 - :x: Office 365 Dark - (win) 
 - :x: iPhone 12 - Gmail iOS 14 (dark) 
-	
+</p>
+</details>
+
 In the style block :
 ```
 <style>
@@ -238,6 +354,7 @@ In the style block :
 </style>
 ```
 And inline : 
+
 ```
 <div class="swap-image">
     <picture>
@@ -262,7 +379,7 @@ Example with white color :
 }
 ```
 
-## Darkmode : Fixing problems in dark mode (hacks and code from Nicole Merlin)
+## Fixing problems in dark mode (hacks and code from Nicole Merlin)
 
 The following techniques were discovered and popularized by Nicoles Merlin through the articles she wrote on Envato (link at the end of each chapter).All the code come directly from the article on the envato website and all credits go to Envato articles. I put the reference link under each part
 
