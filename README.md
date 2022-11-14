@@ -504,6 +504,7 @@ The following techniques were discovered and popularized by Nicoles Merlin throu
 	
 >This works on 
 - :heavy_check_mark: Office 365 Dark (Win)
+- :heavy_check_mark: Outlook 2021 (dark)
 
 To Preserve the Color of Text in Darkmode, we can add a class to the code we want to fix. 
 For example, for a white text, in the code :
