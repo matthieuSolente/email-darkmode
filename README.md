@@ -573,6 +573,11 @@ For example, if the link has a class of `mylink`, we can include the following i
 ```
 For more information on this read Nicole Merlin article on [How to Fix Common Problems With Buttons in Dark Mode](https://webdesign.tutsplus.com/articles/fixing-problems-with-buttons-in-dark-mode-email-design--cms-39411)
 
+## Convert png to gif
+>This work on
+- :heavy_check_mark: Office 365 Dark (Win)
+
+if you have a png image whose background is transparent, but which comes out white on office 365, convert your png to gif, it should solve the problem!
 	
 ## Borders
 
