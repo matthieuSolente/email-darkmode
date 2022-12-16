@@ -541,8 +541,37 @@ In the style block:
 <![endif]-->
 ```
 For more information on this, read Nicole Merlin article : [How To Fix Outlook Dark Mode Problems (Email Design)](https://webdesign.tutsplus.com/tutorials/how-to-fix-outlook-dark-mode-problems--cms-37718)
-	
 
+### Keep text colors in gmail
+
+This trick was discovered by Martin Stripaj on [hteumeuleu email-bugs](https://github.com/hteumeuleu/email-bugs/issues/68#issuecomment-1077531703)
+
+explanation by Remi Parmentier : 
+The idea is to force a color for Gmail using the linear-gradient trick (which Gmail doesn't change). And then on an inner element, you apply the background-clip with a forced black background and transparent text. And this gives you the text with the color applied for the background. This is very clever and a great addition to any email developer’s toolbox for dark mode.
+
+```	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixing Gmail’s dark mode issue</title>
+    <style>
+          .body { font-size:50px; }
+           u + .body .gmail-take-this { background-image:linear-gradient(#000,#000); background-clip: text; color: transparent; }
+    </style>
+</head>
+<body class="body">
+    
+    <div style="background-image:linear-gradient(#fff4b9,#fff4b9); ">
+    <div class="gmail-take-this">
+      This is my text
+    </div>
+    </div>
+    
+</body>
+</html>
+```
 ## Buttons
   
 ### Fix Buttons With a Different Colour Behind the Text in Dark Mode 
