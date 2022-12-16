@@ -910,7 +910,19 @@ And in the style block :
     </style>
 <![endif]-->
 ```
-
+### Transparent Vfill
 On top of that, Nicole Merlin reported to me Alex Robinson's discovery which he shared on twitter:(quote) "It turns out you can keep the vml fill transparent while satisfying the light/dark fill requirement. eg <v:rect fillcolor="#555555" opacity="0%">" .[See the message](https://twitter.com/AlexRob22358708/status/1490879213679050752)
+
+This is an example  :  We wrap the text inside a dark v:fill, and as we are giving it a dark color, we can then use "mso-color-alt:auto", so the white text would be redable
+```
+<!--[if mso]>
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="website.com" style="width: 500px; height: 54px; margin-bottom: 20px; box-sizing: border-box; v-text-anchor: middle;" filled="true" strokecolor="#000000">
+  <v:fill color="#555555" opacity="0"/>
+    <w:anchorlock/>
+    <center style="color: #000000; mso-color-alt: auto;font-family: 'GT America', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold;">My link</center>
+  </v:rect>
+  <![endif]--> 
+   
+```
 
 For more information on this read Nicole Merlin article : [Fixing Text Color Changes Inside VML](https://webdesign.tutsplus.com/tutorials/how-to-fix-outlook-dark-mode-problems--cms-37718)
