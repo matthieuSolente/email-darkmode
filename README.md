@@ -499,7 +499,7 @@ Example with white color :
 }
 ```
 
-### MSO Gradient Solution to keep text colors in Office 365 Dark (hacks and code from Nicole Merlin)
+### MSO Gradient Solution to keep text colors in Office 365 Dark, Outlook 2021 dark, Windows 11 Mail dark (hacks and code from Nicole Merlin)
 The following techniques were discovered and popularized by Nicoles Merlin through the articles she wrote on Envato (link at the end of each chapter).All the code come directly from the article on the envato website and all credits go to Envato articles. I put the reference link under each part
 	
 >This works on 
