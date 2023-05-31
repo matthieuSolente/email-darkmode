@@ -102,7 +102,7 @@ Then in the html place your two images :
 ```
 
 **Note**:
-If you choose light mode in the meta tags, there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
+If you choose light mode in the meta tags, there won't be any changes on Mac OS, so on Mac OS Monterrey, Big Sur, Mojave you'll have the dark image on light background.
 
 ```
 <meta name="color-scheme" content="light">
