@@ -243,14 +243,14 @@ This code was tested on Litmus with or without inline background-color on body (
 >Don't works on
 
 - :x: Android 12 - Outlook 2021 (dark)
-- :x: Android 12 - Windwos 11 Mail (dark)
-- :x: Android 12 - Office 365 Dark (Windows)
-- :x: Android 12 - IPhone 12 - Gamail iOS14
-- :x: Android 12 - IPhone 14 - IOS16 (dark)
-- :x: Android 12 - IPhone 12 - iOS 14 (force dark)
-- :x: Android 12 - Android 13 -Gmail Dark
-- :x: Android 12 - Android 12 Gmail Dark
-- :x: Android 12 - Android 10 - Gmail Dark  
+- :x: Windwos 11 Mail (dark)
+- :x: Office 365 Dark (Windows)
+- :x: IPhone 12 - Gamail iOS14
+- :x: IPhone 14 - IOS16 (dark)
+- :x: IPhone 12 - iOS 14 (force dark)
+- :x: Android 13 -Gmail Dark
+- :x: Android 12 Gmail Dark
+- :x: Android 10 - Gmail Dark  
 
 </p>
 </details>
