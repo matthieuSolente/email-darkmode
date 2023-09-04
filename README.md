@@ -132,7 +132,7 @@ This code was tested on Litmus with or without inline background-color on body (
 - :heavy_check_mark: MacOs Mojave(Dark Mode)
 - :heavy_check_mark: Iphone SE Dark
 - :heavy_check_mark: Android 11 - Outlook (dark)
--:heavy_check_mark: Outlook - Chrome (dark)
+- :heavy_check_mark: Outlook - Chrome (dark)
 
 >Don't works on
 
