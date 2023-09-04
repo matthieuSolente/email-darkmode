@@ -233,16 +233,24 @@ This code was tested on Litmus with or without inline background-color on body (
 <p>
 
 >This works on 
-- :heavy_check_mark: Office 365 Dark (macOS)
-- :heavy_check_mark: Android 10 - Gmail Dark  
-- :heavy_check_mark: Outlook - Chrome (dark)
-- :heavy_check_mark: iPhone SE dark - Outlook 
+- :heavy_check_mark: MacOs Ventura Mail (dark)
+- :heavy_check_mark: MacOs Big Sur (dark)
+- :heavy_check_mark: MacOs Mojave(Dark Mode)
+- :heavy_check_mark: Iphone SE Dark
+- :heavy_check_mark: Android 11 - Outlook (dark)
+-:heavy_check_mark: Outlook - Chrome (dark)
 
 >Don't works on
-- :x: Android 12 - Gmail Dark 
-- :x: Office 365 Dark - (win)
-- :x: iPhone 12 iOS 14 (force dark) 
-- :x: iPhone 12 - Gmail iOS 14 (dark)   
+
+- :x: Android 12 - Outlook 2021 (dark)
+:x: Android 12 - Windwos 11 Mail (dark)
+:x: Android 12 - Office 365 Dark (Windows)
+:x: Android 12 - IPhone 12 - Gamail iOS14
+:x: Android 12 - IPhone 14 - IOS16 (dark)
+:x: Android 12 - IPhone 12 - iOS 14 (force dark)
+:x: Android 12 - Android 13 -Gmail Dark
+:x: Android 12 - Android 12 Gmail Dark
+:x: Android 12 - Android 10 - Gmail Dark  
 
 </p>
 </details>
