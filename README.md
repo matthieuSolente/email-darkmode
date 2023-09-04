@@ -1,62 +1,35 @@
 # EMAIL-DARKMODE
 These different techniques for dark mode were initiated by Nicole Merlin, Remi Parmentier, Mark Robbins, Jay Oram and some other email geeks, and here is a summary of all these techniques known and still functional in 2023. I will do my best to keep this page up to date, please feel free to report errors or outdated items over time..
 
-**NO SUPPORT: Gmail app and Windows 10 mail.** 
-
-for other darkmode clients, here are some hacks
-
-
 ## Image Swap (Code from Litmus team)
 
 This code was tested on testi@ with inline background-color on body (#fefefe).
-
-<details><summary>Check the support for this</summary>
-<p>
-**Mobile Clients**
-	
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| iPhone Mail  |   | :x:  |
-| iPad Mail  |   | :x:  |
-| Gmail App (Android)  |  | :x: |
-| Gmail App (iOS)  |   | :x:  |
-| Outlook App (Android)  |   | :x:  |
-| Outlook App (iOS)  | :heavy_check_mark:  |   |
-
-**Desktop Clients**
-
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| Apple Mail | :heavy_check_mark:  |  |
-| Outlook 2019 (Mac OS) | :heavy_check_mark:  |  |
-| Outlook 2019 (Windows)|   | :x:  |
-
-**Web Clients**
-	
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| Outlook.com | :heavy_check_mark:  |   |
-| Hey.com |   | :x: |
-
-</p>
-</details>
 
 <details><summary>Check the support on Testi@</summary>
 <p>
 
 >This works on (testi@)
 
-- ✔️ Office 365 Dark (macOS)
-- ✔️ Android 10 - Gmail Dark
-- ✔️ iPhone SE dark - Outlook
+- ✔️ MacOS Ventura Mail (dark)
+- ✔️ Mac OS Monterey
+- ✔️ MacOS Big Sur (dark)
+- ✔️ MacOS Mojave(Dark Mode)
+- ✔️ Office 365 Dark(macOS)
 - ✔️ Outlook - Chrome (dark)
+- ✔️ Iphone SE Dark - Outlook
+- ✔️ Android 10 - Gmail Dark
+- ✔️ Android 11 - Outlook Dark
 
 >Don't works on (testi@)
 
-- ❌ Android 12 - Gmail Dark
-- ❌ Office 365 Dark - (win)
-- ❌ iPhone 12 iOS 14 (force dark)
-- ❌ iPhone 12 - Gmail iOS 14 (dark) 
+- ❌ Outlook 2021 (dark)
+- ❌ Windows 11 Mail (dark)
+- ❌ Office 365 Dark (Win) (2104)
+- ❌ IPhone 12 - Gmail iOS14
+- ❌ IPhone 14 - iOS16 (dark)
+- ❌ IPhone 12 - iOS 14 (force dark)
+- ❌ Android 13 -Gmail Dark
+- ❌ Android 12 Gmail Dark
 </p>
 </details>
 
@@ -101,19 +74,6 @@ Then in the html place your two images :
 </div><!--<![endif]-->
 ```
 
-**Note**:
-If you choose light mode in the meta tags, there won't be any changes on Mac OS, so on Mac OS Monterrey, Big Sur, Mojave you'll have the dark image on light background.
-
-```
-<meta name="color-scheme" content="light">
-<meta name="supported-color-schemes" content="light">
-<style>
-:root {
-	color-scheme: light;
-	supported-color-schemes: light;
-}
-```
-
 For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/).
 	
 ## Image swap (hack and code from Mark Robbins)
@@ -155,19 +115,7 @@ This code was tested on Testi@ with inline background-color on body (#fefefe).
 </picture>
 ```
 
-**Note**:
 
-If you choose light mode, there won't be any changes on Mac OS so on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
-
-```
-<meta name="color-scheme" content="light">
-<meta name="supported-color-schemes" content="light">
-<style>
-:root {
-	color-scheme: light;
-	supported-color-schemes: light;
-}
-```
 For more information on image swap, please check [Mark Robbins' page](https://www.goodemailcode.com/email-enhancements/picture) and original [webkit page](https://webkit.org/blog/8840/dark-mode-support-in-webkit/)
 
 ## Image swap (hack and code from Remi Parmentier)
@@ -233,19 +181,6 @@ In the style block :
 </style>
 ```
 
-**Note**:
-
-If you choose light mode (see below), there won't be any changes on Mac OS Monterrey, Big Sur, Mojave (so you'll have the dark image on light background)
-
-```
-<meta name="color-scheme" content="light">
-<meta name="supported-color-schemes" content="light">
-<style>
-:root {
-	color-scheme: light;
-	supported-color-schemes: light;
-}
-```
 To see the original code, please check [hteumeuleu's codepen](https://codepen.io/hteumeuleu/pen/porJdjR)
 
 ## Specific Image swap for iPhone 12 iOS 14 (force dark)
@@ -281,22 +216,42 @@ Including the last hack + the `<picture>` solutions above, we can get a quite go
 <p>
 
 >This works on 
-- :heavy_check_mark: Office 365 Dark (macOS)
-- :heavy_check_mark: Android 10 - Gmail Dark  
+- :heavy_check_mark: Office 365 Dark(macOS)
+- :heavy_check_mark: MacOS Ventura Mail (dark)
+- :heavy_check_mark: Mac OS Monterey
+- :heavy_check_mark: MacOS Big Sur (dark)
+- :heavy_check_mark: MacOS Mojave(Dark Mode)
+- :heavy_check_mark: Iphone SE Dark - Outlook
+- :heavy_check_mark: IPhone 14 - iOS16 (dark)
+- :heavy_check_mark: IPhone 12 - iOS 14 (force dark)
+- :heavy_check_mark: Android 11 - Outlook (dark)
 - :heavy_check_mark: Outlook - Chrome (dark)
-- :heavy_check_mark: iPhone SE dark - Outlook 
-- :heavy_check_mark: iPhone 12 iOS 14 (force dark)
-	
+- 
 >Don't works on
-- :x: Android 12 - Gmail Dark 
-- :x: Office 365 Dark - (win) 
-- :x: iPhone 12 - Gmail iOS 14 (dark) 
+- :x: Android 12 - Outlook 2021 (dark)
+- :x: Android 12 - Windows 11 Mail (dark)
+- :x: Android 12 - Office 365 Dark (Win) (2104)
+- :x: Android 12 - IPhone 12 - Gmail iOS14
+- :x: Android 12 - Android 13 -Gmail Dark
+- :x: Android 12 - Android 12 Gmail Dark
+- :x: Android 12 - Android 10 - Gmail Dark
 </p>
 </details>
 
 In the style block :
 ```
 <style>
+@media (prefers-color-scheme: dark ) {
+	.swap-image,
+    .apple-mail-implicit-dark-support .swap-image{
+      background: url('image-for-darkmode.png') no-repeat center;
+      background-size: contain;
+    }
+     .swap-image img,
+     .apple-mail-implicit-dark-support .swap-image img{
+      visibility: hidden;
+    }
+}
    [data-ogsb] .swap-image,
     .apple-mail-implicit-dark-support .swap-image{
       background: url('image-for-darkmode.png') no-repeat center;
@@ -459,6 +414,7 @@ The following techniques were discovered and popularized by Nicoles Merlin throu
 >This works on 
 - :heavy_check_mark: Office 365 Dark (Win)
 - :heavy_check_mark: Outlook 2021 (dark)
+- :heavy_check_mark: Windows 11 Mail (dark)
 
 To Preserve the Color of Text in Darkmode, we can add a class to the code we want to fix. 
 For example, for a white text, in the code :
@@ -541,7 +497,9 @@ Another technique from Nicole Merlin : we can make the border transparent, e.g. 
 
 #### Transparent background
 >This work on
-- :heavy_check_mark: Office 365 Dark (Win)
+- :heavy_check_mark: Outlook.com Webmail
+- :heavy_check_mark: Outlook for iOS
+- :heavy_check_mark: Outlook for Android
 
 According to Nicole, we can make the <a> tag’s background transparent for Outlook only. We can do it by adding the conditional CSS to the head of the template.
 
@@ -555,12 +513,6 @@ For example, if the link has a class of `mylink`, we can include the following i
 <![endif]-->
 ```
 For more information on this read Nicole Merlin article on [How to Fix Common Problems With Buttons in Dark Mode](https://webdesign.tutsplus.com/articles/fixing-problems-with-buttons-in-dark-mode-email-design--cms-39411)
-
-## Convert png to gif
->This work on
-- :heavy_check_mark: Office 365 Dark (Win)
-
-if you have a png image whose background is transparent, but which comes out white on office 365, convert your png to gif, it should solve the problem!
 	
 ## Borders
 
