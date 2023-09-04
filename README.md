@@ -120,53 +120,31 @@ For more informations, please check [Litmus :Ultimate Guide to Dark Mode](https:
 
 This code was tested on Testi@ with inline background-color on body (#fefefe).
 
-<details><summary>Check the support for this</summary>
-<p>
-**Mobile Clients**
-	
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| iPhone Mail  |   | :x:  |
-| iPad Mail  |   | :x:  |
-| Gmail App (Android)  |  | :x: |
-| Gmail App (iOS)  |   | :x:  |
-| Outlook App (Android)  | | :x: |
-| Outlook App (iOS)  |  | :x:  |
-
-**Desktop Clients**
-
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| Apple Mail | :heavy_check_mark:  | |
-| Outlook (Mac OS) | :heavy_check_mark:  | |
-| Outlook (Windows)|   | :x:  |
-
-**Web Clients**
-	
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| Outlook.com |  | :x:  |
-| Hey.com |   | :x: |
-
-</p>
-</details>
-
 <details><summary>Check the support on Testi@</summary>
 <p>
 
 >This works on
 
-- ✔️ Office 365 Dark (macOS)
-- ✔️ Android 10 - Gmail Dark
+- ✔️ MacOS Ventura Mail (dark)
+- ✔️ Mac OS Monterey
+- ✔️ MacOS Big Sur (dark)
+- ✔️ MacOS Mojave(Dark Mode)
+- ✔️ Office 365 Dark(macOS)
 
 >Don't works on
 
-- ❌ Android 12 - Gmail Dark
-- ❌ Office 365 Dark - (win)
-- ❌ iPhone 12 iOS 14 (force dark)
-- ❌ iPhone 12 - Gmail iOS 14 (dark)
+- ❌ Outlook 2021 (dark)
+- ❌ Windows 11 Mail (dark)
+- ❌ Office 365 Dark (Win) (2104)
+- ❌ IPhone 12 - Gmail iOS14
+- ❌ Iphone SE Dark - Outlook
+- ❌ IPhone 14 - iOS16 (dark)
+- ❌ IPhone 12 - iOS 14 (force dark)
+- ❌ Android 11 - Outlook (dark)
+- ❌ Android 13 -Gmail Dark
+- ❌ Android 12 Gmail Dark
+- ❌ Android 10 - Gmail Dark
 - ❌ Outlook - Chrome (dark)
-- ❌ iPhone SE dark - Outlook
 </p>
 </details>
 
@@ -196,45 +174,13 @@ For more information on image swap, please check [Mark Robbins' page](https://ww
 
 This code was tested on Litmus with or without inline background-color on body (#fefefe). 
 
-<details><summary>Check the support for this</summary>
-<p>
-**Mobile Clients**
-	
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| iPhone Mail  |   | :x:  |
-| iPad Mail  |   | :x:  |
-| Gmail App (Android)  |  | :x: |
-| Gmail App (iOS)  |   | :x:  |
-| Outlook App (Android)  | :heavy_check_mark: *  | :x: * |
-| Outlook App (iOS)  | :heavy_check_mark: |  |
-
-**Desktop Clients**
-
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| Apple Mail | :heavy_check_mark:  | |
-| Outlook (Mac OS) | :heavy_check_mark:  | |
-| Outlook (Windows)|   | :x:  |
-
-**Web Clients**
-	
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| Outlook.com | :heavy_check_mark: |   |
-| Hey.com |   | :x: |
-
-*depends on versions
-</p>
-</details>
-
-
 <details><summary>Check the support on Testi@</summary>
 <p>
 
 >This works on 
 - :heavy_check_mark: MacOs Ventura Mail (dark)
 - :heavy_check_mark: MacOs Big Sur (dark)
+- :heavy_check_mark: MacOs Monterey (dark)
 - :heavy_check_mark: MacOs Mojave(Dark Mode)
 - :heavy_check_mark: Iphone SE Dark
 - :heavy_check_mark: Android 11 - Outlook (dark)
@@ -245,7 +191,7 @@ This code was tested on Litmus with or without inline background-color on body (
 - :x: Android 12 - Outlook 2021 (dark)
 - :x: Windwos 11 Mail (dark)
 - :x: Office 365 Dark (Windows)
-- :x: IPhone 12 - Gamail iOS14
+- :x: IPhone 12 - Gmail iOS14
 - :x: IPhone 14 - IOS16 (dark)
 - :x: IPhone 12 - iOS 14 (force dark)
 - :x: Android 13 -Gmail Dark
