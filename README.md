@@ -454,7 +454,7 @@ In the style block:
 ```
 For more information on this, read Nicole Merlin article : [How To Fix Outlook Dark Mode Problems (Email Design)](https://webdesign.tutsplus.com/tutorials/how-to-fix-outlook-dark-mode-problems--cms-37718)
 
-## Keep white text colors in gmail (Hack and Code from Remi Parmentier)
+## Keep text colors in gmail (Hack and Code from Remi Parmentier)
 
 >This works on 
 - :heavy_check_mark: Gmail (iOS)
