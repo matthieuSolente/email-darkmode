@@ -453,8 +453,42 @@ In the style block:
 ```
 For more information on this, read Nicole Merlin article : [How To Fix Outlook Dark Mode Problems (Email Design)](https://webdesign.tutsplus.com/tutorials/how-to-fix-outlook-dark-mode-problems--cms-37718)
 
-### Keep text colors in gmail
+### Keep white text colors in gmail (Hack and Code from Remi Parmentier)
 
+>This works on 
+- :heavy_check_mark: Gmail (iOS)
+	
+This technique works especially to keep white text.
+
+```	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixing Gmail’s dark mode issues with CSS Blend Modes</title>
+    <style>
+        u + .body .gmail-blend-screen { background:#000; mix-blend-mode:screen; }
+        u + .body .gmail-blend-difference { background:#000; mix-blend-mode:difference; }
+    </style>
+</head>
+<body class="body">
+    <div style="background:#639; background-image:linear-gradient(#639,#639); color:#fff;">
+        <div class="gmail-blend-screen">
+            <div class="gmail-blend-difference">
+                <!-- Your content starts here -->
+                Lorem ipsum dolor, sit amet, consectetur adipisicing elit.
+                <!-- Your content ends here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
+For more information on blend mode please check [Remi Parmentier' page](https://www.hteumeuleu.com/2021/fixing-gmail-dark-mode-css-blend-modes/)
+	
+	
+### Keep white text colors in gmail (Martin Stripaj)
 This trick was discovered by Martin Stripaj on [hteumeuleu email-bugs](https://github.com/hteumeuleu/email-bugs/issues/68#issuecomment-1077531703)
 
 explanation by Remi Parmentier : 
@@ -483,6 +517,20 @@ The idea is to force a color for Gmail using the linear-gradient trick (which Gm
 </body>
 </html>
 ```
+
+### Keep black text colors in gmail (Colton Eakins)
+
+```
+/* NEW: Force black text on dark mode. */
+u + .body .gmail-blend-exclusion-blk { background-color:#000; mix-blend-mode:exclusion; }
+u + .body .gmail-blend-difference-blk { background-color:#000; mix-blend-mode:difference; color: #fff; }
+```
+Can be used on span or div 
+
+```
+<span class="gmail-blend-exclusion-blk"><span class="gmail-blend-difference-blk">{{YOUR_TEXT_HERE}}</span></span>
+```
+
 ## Buttons
   
 ### Fix Buttons With a Different Colour Behind the Text in Dark Mode 
@@ -648,40 +696,6 @@ For a black button on outlook that becomes white in darkmode
 <![endif]-->
 ```
 
-## Gmail’s dark mode in iOS (Hack and Code from Remi Parmentier)
->This works on 
-- :heavy_check_mark: Gmail (iOS)
-	
-This technique works for text or background colors.
-
-```	
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixing Gmail’s dark mode issues with CSS Blend Modes</title>
-    <style>
-        u + .body .gmail-blend-screen { background:#000; mix-blend-mode:screen; }
-        u + .body .gmail-blend-difference { background:#000; mix-blend-mode:difference; }
-    </style>
-</head>
-<body class="body">
-    <div style="background:#639; background-image:linear-gradient(#639,#639); color:#fff;">
-        <div class="gmail-blend-screen">
-            <div class="gmail-blend-difference">
-                <!-- Your content starts here -->
-                Lorem ipsum dolor, sit amet, consectetur adipisicing elit.
-                <!-- Your content ends here -->
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-```
-For more information on blend mode please check [Remi Parmentier' page](https://www.hteumeuleu.com/2021/fixing-gmail-dark-mode-css-blend-modes/)
-	
-	
 ## override macOS/iOS dark mode colors
 >This works on 
 - :heavy_check_mark: macOS/iOS
