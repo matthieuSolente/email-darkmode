@@ -2,7 +2,7 @@
 
 These different techniques for dark mode were initiated by Nicole Merlin, Remi Parmentier, Mark Robbins, Jay Oram and some other email geeks, and here is a summary of all these techniques known and still functional in 2023. I will do my best to keep this page up to date, please feel free to report errors or outdated items over time..
 
-## Image Swap (Code from Litmus team)
+# Image Swap (Code from Litmus team)
 
 This code was tested on testi@ with inline background-color on body (#fefefe).
 
@@ -306,9 +306,9 @@ A common hack to add a white shadow around an image in dark mode
 } 
 ```
 
-## Keep text color on dark mode
+# Keep text color on dark mode
 	
-### Keep text colors in dark mode
+## Keep text colors in dark mode (Outlook)
 
 Following the technique described among others by Litmus, we can also easily apply it to text colors.
 
@@ -392,7 +392,7 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr
 ```	
 For more information on this, please check [Litmus article](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/) or [Jay Oram pen](https://codepen.io/emailjay/pen/BazyNdZ)
 
-### Keep text colors in iPhone 12 iOS 14 (force dark)
+## Keep text colors in iPhone 12 iOS 14 (force dark)
 	
 >This works on 
 - :heavy_check_mark: iPhone 12 iOS 14 (force dark)
@@ -409,7 +409,7 @@ Example with white color :
 }
 ```
 
-### MSO Gradient Solution to keep text colors in Office 365 Dark, Outlook 2021 dark, Windows 11 Mail dark (hacks and code from Nicole Merlin)
+## MSO Gradient Solution to keep text colors in Office 365 Dark, Outlook 2021 dark, Windows 11 Mail dark (hacks and code from Nicole Merlin)
 The following techniques were discovered and popularized by Nicoles Merlin through the articles she wrote on Envato (link at the end of each chapter).All the code come directly from the article on the envato website and all credits go to Envato articles. I put the reference link under each part
 	
 >This works on 
@@ -453,7 +453,7 @@ In the style block:
 ```
 For more information on this, read Nicole Merlin article : [How To Fix Outlook Dark Mode Problems (Email Design)](https://webdesign.tutsplus.com/tutorials/how-to-fix-outlook-dark-mode-problems--cms-37718)
 
-### Keep white text colors in gmail (Hack and Code from Remi Parmentier)
+## Keep white text colors in gmail (Hack and Code from Remi Parmentier)
 
 >This works on 
 - :heavy_check_mark: Gmail (iOS)
@@ -488,7 +488,7 @@ This technique works especially to keep white text.
 For more information on blend mode please check [Remi Parmentier' page](https://www.hteumeuleu.com/2021/fixing-gmail-dark-mode-css-blend-modes/)
 	
 	
-### Keep white text colors in gmail (Martin Stripaj)
+## Keep text colors in gmail (Martin Stripaj)
 This trick was discovered by Martin Stripaj on [hteumeuleu email-bugs](https://github.com/hteumeuleu/email-bugs/issues/68#issuecomment-1077531703)
 
 explanation by Remi Parmentier : 
@@ -518,7 +518,7 @@ The idea is to force a color for Gmail using the linear-gradient trick (which Gm
 </html>
 ```
 
-### Keep black text colors in gmail (Colton Eakins)
+## Force black text on dark mode in gmail (Colton Eakins)
 
 ```
 /* NEW: Force black text on dark mode. */
@@ -531,11 +531,11 @@ Can be used on span or div
 <span class="gmail-blend-exclusion-blk"><span class="gmail-blend-difference-blk">{{YOUR_TEXT_HERE}}</span></span>
 ```
 
-## Buttons
+# Buttons
   
-### Fix Buttons With a Different Colour Behind the Text in Dark Mode 
+## Fix Buttons With a Different Colour Behind the Text in Dark Mode 
 
-#### Transparent borders
+### Transparent borders
 
 >This work on:
 - :heavy_check_mark: Outlook.com Webmail, 
@@ -544,7 +544,7 @@ Can be used on span or div
 
 Another technique from Nicole Merlin : we can make the border transparent, e.g. `border: 8px solid transparent` so that only the background colour of the link element shows through
 
-#### Transparent background
+### Transparent background
 >This work on
 - :heavy_check_mark: Outlook.com Webmail
 - :heavy_check_mark: Outlook for iOS
@@ -563,9 +563,9 @@ For example, if the link has a class of `mylink`, we can include the following i
 ```
 For more information on this read Nicole Merlin article on [How to Fix Common Problems With Buttons in Dark Mode](https://webdesign.tutsplus.com/articles/fixing-problems-with-buttons-in-dark-mode-email-design--cms-39411)
 	
-## Borders
+# Borders
 
-### Fix Buttons Disappearing Into the Background in Dark Mode
+## Fix Buttons Disappearing Into the Background in Dark Mode
 
 >This works on 
 - :heavy_check_mark: Gmail App for iOS/Android
@@ -583,7 +583,7 @@ These email clients will keep the button dark but they will also flip the body b
   
 More information on this in Nicole article [Fixing Problems With Borders in Dark Mode (Email Design)](https://webdesign.tutsplus.com/articles/fixing-problems-with-borders-in-dark-mode-email-design--cms-39410)
 
-### Using Media Queries to Control Borders in Dark Mode
+## Using Media Queries to Control Borders in Dark Mode
 	
 >This work on
 - :heavy_check_mark: Apple Mail (iOS and macOS)
@@ -598,7 +598,7 @@ For borders, one simple Nicole advice is to force color through darkmode media q
 </style>
 ```
 
-### Using Data Attributes to Fix Borders in Dark Mode
+## Using Data Attributes to Fix Borders in Dark Mode
 	
 >This work on
 - :heavy_check_mark: outlook.com
@@ -623,7 +623,7 @@ In the code
 
 More information on this in Nicole article [Fixing Problems With Borders in Dark Mode (Email Design)](https://webdesign.tutsplus.com/articles/fixing-problems-with-borders-in-dark-mode-email-design--cms-39410)
 	
-### Fix Border Problems in Outlook for Mac
+## Fix Border Problems in Outlook for Mac
 
 >This work on
 - :heavy_check_mark: Outlook for Mac
@@ -632,7 +632,7 @@ More information on this in Nicole article [Fixing Problems With Borders in Dark
 
 More information on this in Nicole article [Fixing Problems With Borders in Dark Mode (Email Design)](https://webdesign.tutsplus.com/articles/fixing-problems-with-borders-in-dark-mode-email-design--cms-39410)
 
-### Fix Border Problems in Outlook for Windows
+## Fix Border Problems in Outlook for Windows
 
 >This work on
 - :heavy_check_mark: Outlook for Windows
@@ -643,7 +643,7 @@ Here we can try Outlook specific code for borders, like `mso-border-alt`:
 
 More information on this in Nicole article [Fixing Problems With Borders in Dark Mode (Email Design)](https://webdesign.tutsplus.com/articles/fixing-problems-with-borders-in-dark-mode-email-design--cms-39410)
 	
-### Different Elements to Fix Border Problems 
+## Different Elements to Fix Border Problems 
 
 Here are some other advices from Nicole, direclty taken from her darkmode article
 	
@@ -723,8 +723,8 @@ For borders, include original border style plus...
 -webkit-border-end: 2px solid #000000 !important; (use for right border)
 ```
 
-## keep colors in VML (Nicole Merlin)
-### Different Solutions to Keep text colors on VML
+# keep colors in VML (Nicole Merlin)
+## Different Solutions to Keep text colors on VML
 
 >This works on 
 - :heavy_check_mark: All Outlook that support VML
@@ -831,7 +831,7 @@ And in the style block :
     </style>
 <![endif]-->
 ```
-### Transparent Vfill
+## Transparent Vfill
 On top of that, Nicole Merlin reported to me Alex Robinson's discovery which he shared on twitter:(quote) "It turns out you can keep the vml fill transparent while satisfying the light/dark fill requirement. eg <v:rect fillcolor="#555555" opacity="0%">" .[See the message](https://twitter.com/AlexRob22358708/status/1490879213679050752)
 
 This is an example  :  We wrap the text inside a dark v:fill, and as we are giving it a dark color, we can then use "mso-color-alt:auto", so the white text would be redable
