@@ -563,7 +563,15 @@ For example, if the link has a class of `mylink`, we can include the following i
 <![endif]-->
 ```
 For more information on this read Nicole Merlin article on [How to Fix Common Problems With Buttons in Dark Mode](https://webdesign.tutsplus.com/articles/fixing-problems-with-buttons-in-dark-mode-email-design--cms-39411)
-	
+### Using mso-properties
+
+According to my test, we can get same result using :
+```
+mso-shading:transparent
+```
+
+in the inline-style directly
+
 # Borders
 
 ## Fix Buttons Disappearing Into the Background in Dark Mode
