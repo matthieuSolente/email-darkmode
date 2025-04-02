@@ -4,7 +4,7 @@ These different techniques for dark mode were initiated by Nicole Merlin, Remi P
 
 # Image Swap
 
-## Image Swap (Code from Litmus team)
+## Image Swap (Code from Alice Li)
 
 This code was tested on testi@ with inline background-color on body (#fefefe).
 
