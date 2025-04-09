@@ -101,23 +101,30 @@ This code was tested on Testi@ with inline background-color on body (#fefefe).
 >This works on
 
 - ✔️ MacOS Ventura Mail (dark)
-- ✔️ Mac OS Monterey
-- ✔️ MacOS Big Sur (dark)
-- ✔️ MacOS Mojave(Dark Mode)
-- ✔️ Office 365 Dark(macOS)
+- ✔️ Office 365 (dark) (Ventura) 16.82
+- ✔️ macOS Sequoia (dark)
+- ✔️ macOS Sonoma (dark)
+- ✔️ macOS Ventura Mail (dark)
+- ✔️ macOS Monterey (dark)
+- ✔️ macOS Big Sur (dark)
+- ✔️ iPhone 8 - iOS 15 - Outlook (dark)
+- ✔️ iPhone 16 Pro Max - iOS 18 (dark)
+- ✔️ iPhone 15 Pro - iOS 17 (dark)
+- ✔️ iPhone 14 - iOS 16.7 (dark)
+- ✔️ Android 11 - Outlook (dark)
 
 >Don't works on
 
-- ❌ Outlook 2021 (dark)
+- ❌ Outlook 2024 (dark) (Win 11) (2502)
+- ❌ Outlook 2021 (dark) (2502)
+- ❌ Office 365 (dark) (2408) Semi
+- ❌ Office 365 120DPI (dark) (2408)
 - ❌ Windows 11 Mail (dark)
-- ❌ Office 365 Dark (Win) (2104)
-- ❌ IPhone 12 - Gmail iOS14
-- ❌ Iphone SE Dark - Outlook
-- ❌ IPhone 14 - iOS16 (dark)
-- ❌ IPhone 12 - iOS 14 (force dark)
-- ❌ Android 11 - Outlook (dark)
-- ❌ Android 13 -Gmail Dark
-- ❌ Android 12 Gmail Dark
+- ❌ iPhone 14 plus (dark) - iOS 16 - Gmail
+- ❌ iPhone 14 plus (dark) - Yahoo
+- ❌ Android 14 Pixel7 Pro Yahoo (dark) (7.52.2)
+- ❌ Android 13 - Gmail Dark
+- ❌ Android 12 - Gmail Dark
 - ❌ Android 10 - Gmail Dark
 - ❌ Outlook - Chrome (dark)
 </p>
