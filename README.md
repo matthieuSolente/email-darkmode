@@ -147,25 +147,32 @@ This code was tested on Litmus with or without inline background-color on body (
 <p>
 
 >This works on 
-- ✔️ MacOs Ventura Mail (dark)
-- ✔️ MacOs Big Sur (dark)
-- ✔️ MacOs Monterey (dark)
-- ✔️ MacOs Mojave(Dark Mode)
-- ✔️ Iphone SE Dark
+- ✔️ Office 365 (dark) (Ventura) 16.82
+- ✔️ macOS Sequoia (dark)
+- ✔️ macOS Sonoma (dark)
+- ✔️ macOS Ventura Mail (dark)
+- ✔️ macOS Monterey (dark)
+- ✔️ macOS Big Sur (dark)
+- ✔️ iPhone 8 - iOS 15 - Outlook (dark)
+- ✔️ iPhone 16 Pro Max - iOS 18 (dark)
+- ✔️ iPhone 15 Pro - iOS 17 (dark)
+- ✔️ iPhone 14 - iOS 16.7 (dark)
 - ✔️ Android 11 - Outlook (dark)
 - ✔️ Outlook - Chrome (dark)
 
 >Don't works on
 
-- ❌ Android 12 - Outlook 2021 (dark)
+- ❌ Outlook 2024 (dark) (Win 11) (2502)
+- ❌ Outlook 2021 (dark) (2502)
+- ❌ Office 365 (dark) (2408) Semi
+- ❌ Office 365 120DPI (dark) (2408)
+- ❌ iPhone 14 plus (dark) - iOS 16 - G
+- ❌ iPhone 14 plus (dark) - Yahoo
 - ❌ Windows 11 Mail (dark)
-- ❌ Office 365 Dark (Windows)
-- ❌ IPhone 12 - Gmail iOS14
-- ❌ IPhone 14 - IOS16 (dark)
-- ❌ IPhone 12 - iOS 14 (force dark)
-- ❌ Android 13 -Gmail Dark
-- ❌ Android 12 Gmail Dark
-- ❌ Android 10 - Gmail Dark  
+- ❌ Android 14 Pixel7 Pro Yahoo (dark)
+- ❌ Android 13 - Gmail Dark
+- ❌ Android 12 - Gmail Dark
+- ❌ Android 10 - Gmail Dark
 
 </p>
 </details>
