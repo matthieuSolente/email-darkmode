@@ -630,6 +630,8 @@ For example, if the link has a class of `mylink`, we can include the following i
 <![endif]-->
 ```
 
+Here I realised that we can get same result simply using : mso-shading:transparent in the inline style, which saves CSS code!
+
 For more information on this read Nicole Merlin article on [How to Fix Common Problems With Buttons in Dark Mode](https://webdesign.tutsplus.com/articles/fixing-problems-with-buttons-in-dark-mode-email-design--cms-39411)
 
 ### Using mso-properties
