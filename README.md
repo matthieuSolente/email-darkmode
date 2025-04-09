@@ -348,32 +348,36 @@ A common hack to add a white shadow around an image in dark mode
 Following the technique described among others by Litmus, we can also easily apply it to text colors.
 
 <details><summary>Check the support for this</summary>
+<p>The following list is not at all exhaustive: I use testi@ and this is the list of versions for which I have a rendering in dark mode</p>
 <p>
 **Mobile Clients**
 	
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| iPhone Mail  |   | :x:  |
-| iPad Mail  |   | :x:  |
-| Gmail App (Android)  |  | :x: |
-| Gmail App (iOS)  |   | :x:  |
-| Outlook App (Android)  |   | :x:  |
-| Outlook App (iOS)  | ✔️  |   |
-
-**Desktop Clients**
-
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| Apple Mail | ✔️  |  |
-| Outlook 2019 (Mac OS) | ✔️  |  |
-| Outlook 2019 (Windows)|   | :x:  |
-
-**Web Clients**
-	
-| Email Clients  | Works | Don't works |
-| :---         |     :---:      |     :---:      |
-| Outlook.com | ✔️  |   |
-| Hey.com |   | :x: |
+>This works on 
+- ✔️ Office 365 (dark) (Ventura) 16.82
+- ✔️ OmacOS Sequoia (dark)
+- ✔️ OmacOS Sonoma (dark)
+- ✔️ OmacOS Ventura Mail (dark)
+- ✔️ OmacOS Monterey (dark)
+- ✔️ OmacOS Big Sur (dark)
+- ✔️ OiPhone 8 - iOS 15 - Outlook (dark)
+- ✔️ OiPhone 16 Pro Max - iOS 18 (dark)
+- ✔️ OiPhone 15 Pro - iOS 17 (dark)
+- ✔️ OiPhone 14 - iOS 16.7 (dark)
+- ✔️ OAndroid 11 - Outlook (dark)
+  
+>Don't works on
+- ❌ Outlook 2024 (dark) (Win 11) (2502
+- ❌ Outlook 2021 (dark) (2502)
+- ❌ Office 365 (dark) (2408) Semi
+- ❌ Office 365 120DPI (dark) (2408)
+- ❌ Windows 11 Mail (dark)
+- ❌ iPhone 14 plus (dark) - iOS 16 - Gma
+- ❌ iPhone 14 plus (dark) - Yahoo
+- ❌ Android 14 Pixel7 Pro Yahoo (dark)
+- ❌ Android 13 - Gmail Dark
+- ❌ Android 12 - Gmail Dark
+- ❌ Android 10 - Gmail Dark
+- ❌ Outlook - Chrome (dark)
 
 </p>
 </details>
