@@ -460,16 +460,17 @@ Example with white color :
 }
 ```
 
-## MSO Gradient Solution to keep text colors in Office 365 Dark, Outlook 2021 dark, Windows 11 Mail dark (hacks and code from Nicole Merlin)
+## MSO Gradient Solution to keep text colors in Office 365 Dark, Outlook 2021 dark, Outlook 2024 dark (hacks and code from Nicole Merlin)
 
 The following techniques were discovered and popularized by Nicole Merlin through the articles she wrote on Envato (link at the end of each chapter).All the code come directly from the article on the Envato website and all credits go to Envato articles. I put the reference link under each part
 	
 >This works on 
 - ✔️ Office 365 Dark (Win)
 - ✔️ Outlook 2021 (dark)
-- ✔️ Windows 11 Mail (dark)
+- ✔️ Outlook 2024 (dark)
+- ❌ Windows 11 Mail (dark)
 
-To Preserve the Color of Text in Darkmode, we can add a class to the code we want to fix. 
+To Preserve the Color of Text when we have a background color that change in Darkmode, we can add a class to the code we want to fix. This also works with VML. 
 
 For example, for a white text, in the code:
 
@@ -610,13 +611,20 @@ Can be used on `<span>` or `<div>`:
 - ✔️ Outlook for iOS, 
 - ✔️ Outlook for Android
 
-Another technique from Nicole Merlin : we can make the border transparent, e.g. `border: 8px solid transparent` so that only the background colour of the link element shows through
+This situation arises when a button is styled using CSS borders to outline the edges, mimicking padding and giving the button a filled appearance. This technique is often used to ensure the entire button area is interactive.
+
+With this method, the background color is applied directly to the text link. However, in Dark Mode—particularly in Outlook.com, the Outlook app on iOS, and the Outlook app on Android—the background color is automatically inverted. Unfortunately, these platforms don’t reverse the colors of CSS borders, which leads to an inconsistent visual result.
+
+Another solution from Nicole Merlin : we can make the border transparent, e.g. `border: 8px solid transparent` so that only the background colour of the link element shows through
 
 ### Transparent background
 >This work on
-- ✔️ Outlook.com Webmail
-- ✔️ Outlook for iOS
-- ✔️ Outlook for Android
+- ✔️ Outlook windows
+
+
+A similar issue can occur when using a VML button that includes a fill color, especially if there's also a background-color applied to the <a> tag or other elements layered inside the VML structure.
+
+In Dark Mode, Outlook doesn’t invert the fill color used in VML shapes. However, it does reverse the background color applied to elements placed over the VML, which results in a noticeable color mismatch.
 
 According to Nicole, we can make the <a> tag’s background transparent for Outlook only. We can do it by adding the conditional CSS to the head of the template.
 
@@ -761,25 +769,6 @@ box-shadow: inset 0px 0px 0px 2px #ffffff;
 
 More information on this in Nicole article [Fixing Problems With Borders in Dark Mode (Email Design)](https://webdesign.tutsplus.com/articles/fixing-problems-with-borders-in-dark-mode-email-design--cms-39410)
 
-### MSO Gradient Solution to keep background colors in html
-
->This works on 
-- ✔️ Office 365 Dark (Win)
-	
-Following Nicole's tutorial, I noticed that the mso-gradient technique also works for the background color. For example :
-For a black button on outlook that becomes white in darkmode
-	
-```html
-<!--[if gte mso 16]>
-    <style>
-        .button {
-            mso-style-textfill-type:gradient;
-            mso-style-textfill-fill-gradientfill-stoplist:"0 \#FFFFFF 0 100000\,100000 \#FFFFFF 0 100000";
-            background-color:black !important;
-        }
-    </style>
-<![endif]-->
-```
 
 ## override macOS/iOS dark mode colors
 
