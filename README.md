@@ -1,4 +1,4 @@
-# Email-Darkmode Rules
+# Email Darkmode Rules
 
 These different techniques for dark mode were initiated by Nicole Merlin, Remi Parmentier, Mark Robbins,Alice Li, Jay Oram and some other email geeks, and here is a summary of all these techniques known and still functional in 2023. I will do my best to keep this page up to date, please feel free to report errors or outdated items over time..
 
