@@ -9,30 +9,41 @@ These different techniques for dark mode were initiated by Nicole Merlin, Remi P
 This code was tested on testi@ with inline background-color on body (#fefefe).
 
 <details><summary>Check the support on Testi@</summary>
+	<p>The following list is not at all exhaustive: I use testi@ and this is the list of versions for which I have a rendering in dark mode</p>
 <p>
 
 >This works on (testi@)
 
-- ✔️ MacOS Ventura Mail (dark)
-- ✔️ Mac OS Monterey
-- ✔️ MacOS Big Sur (dark)
-- ✔️ MacOS Mojave(Dark Mode)
-- ✔️ Office 365 Dark(macOS)
-- ✔️ Outlook - Chrome (dark)
+- ✔️ Office 365 (dark) (Ventura) 16.82
+- ✔️ macOS Sequoia (dark)
+- ✔️ macOS Sonoma (dark)
+- ✔️ macOS Ventura Mail (dark)
+- ✔️ macOS Monterey (dark)
+- ✔️ macOS Big Sur (dark)
 - ✔️ Iphone SE Dark - Outlook
 - ✔️ Android 10 - Gmail Dark
 - ✔️ Android 11 - Outlook Dark
+- ✔️ iPhone 16 Pro Max - iOS 18 (dark)
+- ✔️ iPhone 15 Pro - iOS 17 (dark)
+- ✔️ iPhone 14 - iOS 16.7 (dark)
 
 >Don't works on (testi@)
 
 - ❌ Outlook 2021 (dark)
+- ❌ Outlook 2024 (dark) (Win 11) (2502)
+- ❌ Office 365 (dark) (2408) Semi
+- ❌ Office 365 120DPI (dark) (2408)
 - ❌ Windows 11 Mail (dark)
-- ❌ Office 365 Dark (Win) (2104)
+- ❌ iPhone 14 plus (dark) - iOS 16 - Gmail
+- ❌ iPhone 14 plus (dark) - Yahoo
 - ❌ IPhone 12 - Gmail iOS14
 - ❌ IPhone 14 - iOS16 (dark)
 - ❌ IPhone 12 - iOS 14 (force dark)
+- ❌ Android 14 Pixel7 Pro Yahoo (dark)
 - ❌ Android 13 -Gmail Dark
 - ❌ Android 12 Gmail Dark
+- ❌ Android 10 - Gmail Dark
+- ❌  Outlook - Chrome (dark)
 </p>
 </details>
 
