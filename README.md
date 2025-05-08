@@ -649,7 +649,7 @@ According to my test, we can get same result using `mso-shading: transparent` in
 
 A solution provided by Wilbert Heinen is to use hexa code for the v:fill component or in the fillcolor property, and then use rgba on the a tag.
 
-See a working example one [Litmus page](https://litmus.com/community/snippets/271-fixing-vml-button-background-colors-for-dark-mode-wilbert-heinen).
+See a working example on [Litmus page](https://litmus.com/community/snippets/271-fixing-vml-button-background-colors-for-dark-mode-wilbert-heinen).
 
 
 # Borders
