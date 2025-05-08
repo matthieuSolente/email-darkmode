@@ -645,6 +645,13 @@ For more information on this read Nicole Merlin article on [How to Fix Common Pr
 
 According to my test, we can get same result using `mso-shading: transparent` in the inline-style directly, which saves CSS code!
 
+### Using rgba
+
+A solution provided by Wilbert Heinen is to use hexa code for the v:fill component or in the fillcolor property, and then use rgba on the a tag.
+
+See a working example one [Litmus page](https://litmus.com/community/snippets/271-fixing-vml-button-background-colors-for-dark-mode-wilbert-heinen).
+
+
 # Borders
 
 ## Fix Buttons Disappearing Into the Background in Dark Mode
