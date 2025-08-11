@@ -305,7 +305,7 @@ And inline:
   </div>
 ```
 
-## Image color inversion (hack and code from Jay Oram)
+## Image color inversion - Turn all icons white (hack and code from Jay Oram)
 
 Here is another option to change image appearance in darkmode.
 
