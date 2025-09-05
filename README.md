@@ -305,9 +305,9 @@ And inline:
   </div>
 ```
 
-## Image color inversion (hack and code from Jay Oram)
+## Image color inversion - Turn all icons white (hack and code from Jay Oram)
 
-Here is another option to change image appearance in darkmode.
+Here is another option to change image appearance in darkmode. The brightness(0) turns icons fully black, then invert(1) inverts the black parts to white. A great technique to turn icons white in dark mode where supported, saving adding another image and swapping.
 
 >This works on 
 - ✔️Office 365 Dark (macOS)
